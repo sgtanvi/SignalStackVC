@@ -9,8 +9,8 @@ from dotenv import load_dotenv
 from openai import OpenAI
 import numpy as np
 
-from process.pdf_text_extractor import extract_text_with_fallback_url
-from process.keyword_scanner    import score_keywords
+# from process.pdf_text_extractor import extract_text_with_fallback_url
+from process.keyword_score import score_keywords
 
 load_dotenv()
 openai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
