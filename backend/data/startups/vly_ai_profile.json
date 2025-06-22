@@ -1,23 +1,95 @@
 {
   "company_name": "vly ai",
-  "summary": "vly.ai is building the world's best AI full-stack developer that operates completely on the web. They focus on automating the full-stack development process to enable companies and non-technical founders to create web software with ease.",
-  "product": "An AI-powered full-stack developer platform that automates web software development entirely on the web, offering a next-generation web software automation experience. It aims to outperform existing AI IDEs by providing comprehensive development capabilities.",
-  "team": "Victor Cheng is the Co-Founder and CEO of vly.ai. The team recently launched on Y Combinator (YC F24) and is focused on creating innovative web software automation tools.",
-  "traction": "Launched on Y Combinator (YC F24) and has received positive user feedback, with users stating it outperforms competitors like Lovable, Replit, and Bolt. Recognized as a game-changer for companies and non-technical founders.",
-  "funding": "vly.ai has funding associated with its Y Combinator (YC F24) launch.",
-  "market": "The startup operates in the web software automation and AI development tools market, targeting companies and non-technical founders seeking to automate full-stack development.",
-  "tech_stack": "unknown",
+  "summary": "vly.ai is building the world's best AI full-stack developer, allowing users to create custom full-stack software without writing code. The platform automates the development process and is designed for both technical and non-technical users.",
+  "product": "Key features include the ability to create full-stack web applications automatically with AI, a user-friendly interface that describes software in plain English, and tools for data analytics and automation.",
+  "team": {
+    "founders": [
+      {
+        "name": "Victor Cheng",
+        "role": "Co-Founder and CEO"
+      }
+    ],
+    "key_members": null
+  },
+  "traction": {
+    "employees": 3,
+    "monthly_visits": 3700,
+    "avg_visit_duration": "00:01:24",
+    "page_per_visit": 1.91,
+    "bounce_rate": 50.82
+  },
+  "funding": {
+    "amount_raised": 0,
+    "sources": 10
+  },
+  "market": "The startup operates in the software development and automation market, targeting businesses and non-technical founders seeking to streamline their development processes.",
+  "tech_stack": {
+    "description": "AI-powered solutions for data analytics and automation tools.",
+    "platform": "Web-based"
+  },
   "sources": [
-    "https://www.ycombinator.com/companies/vly-ai",
-    "https://vly.ai"
+    "https://www.linkedin.com/in/victor-abel",
+    "https://www.crunchbase.com/organization/vly-ai",
+    "https://vlyai.mintlify.app/",
+    "https://getlatka.com/companies/vly.ai/team",
+    "https://aichief.com/ai-business-tools/vly-ai/",
+    "https://www.linkedin.com/company/vly-ai",
+    "https://getlatka.com/companies/vly.ai",
+    "https://www.ycombinator.com/companies/vly-ai-2"
   ],
+  "categorized_sources": {
+    "company_website": [],
+    "funding": [
+      "https://www.treeo.vc/",
+      "https://www.crunchbase.com/organization/vly-ai/company_financials",
+      "https://pitchbook.com/profiles/company/720886-42",
+      "https://tracxn.com/d/companies/vly.ai/__lNWl0BS78ALyb035-nRZZBhsyddlcrQJZFZROgoUA74",
+      "https://tracxn.com/d/companies/vly.ai/__lNWl0BS78ALyb035-nRZZBhsyddlcrQJZFZROgoUA74/funding-and-investors",
+      "https://www.ycombinator.com/companies/14-ai/jobs/Vcmqv7Z-founding-engineer",
+      "https://www.ycombinator.com/companies/vly-ai-2/jobs",
+      "https://www.ycombinator.com/companies/vly-ai-2/jobs/5xe004o-full-stack-applied-ai-software-engineering-intern",
+      "https://www.crunchbase.com/organization/vly-ai",
+      "https://www.ycombinator.com/companies/vly-ai-2"
+    ],
+    "traction": [
+      "https://www.quivly.ai/products/insights",
+      "https://getlatka.com/companies/vly.ai/team",
+      "https://getlatka.com/companies/vly.ai"
+    ],
+    "tech": [
+      "https://x.com/vly_ai",
+      "https://vlyai.mintlify.app/",
+      "https://theresanaiforthat.com/ai/vly-ai/",
+      "https://aichief.com/ai-business-tools/vly-ai/",
+      "https://sales.superagi.com/contact/manav-bokinala"
+    ],
+    "team": [
+      "https://www.linkedin.com/in/victor-abel",
+      "https://www.linkedin.com/posts/y-combinator_vlyai-yc-f24-is-the-easiest-way-to-create-activity-7262177777733296129-voSF",
+      "https://www.linkedin.com/posts/fondohq_founderjournal-vlyai-launches-automated-activity-7264370765276286977-yGv8",
+      "https://vly.ai/",
+      "https://www.linkedin.com/company/vly-ai",
+      "https://www.linkedin.com/in/mbokinala"
+    ],
+    "other": [
+      "https://www.toolify.ai/compare/vly-ai-vs-veo3",
+      "https://rocketreach.co/vlyai-management_b6cdcb6cc777bd6f",
+      "https://www.toolify.ai/compare/antispace-vs-vly-ai"
+    ]
+  },
   "confidence_scores": {
-    "funding": 1.0,
-    "team": 1.0
+    "funding": 0.92,
+    "traction": 0.78,
+    "tech": 0.76,
+    "team": 0.96,
+    "other": 0.0
   },
   "category_counts": {
-    "funding": 1,
-    "team": 2
+    "funding": 10,
+    "traction": 3,
+    "tech": 5,
+    "team": 6,
+    "other": 3
   },
   "raw_data": {
     "company_website": [],
@@ -26,40 +98,199 @@
         "title": "vly.ai: Automating the full-stack developer",
         "link": "https://www.ycombinator.com/companies/vly-ai-2",
         "snippet": "Automating the full-stack developer. vly.ai is building the world's best AI full-stack developer, run completely on the web. Active Founders.",
-        "position": 1,
-        "query": "\"vly ai\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "source_query": "\"vly ai\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "confidence": 1.0
+      },
+      {
+        "title": "vly.ai - Crunchbase Company Profile & Funding",
+        "link": "https://www.crunchbase.com/organization/vly-ai",
+        "snippet": "vly.ai creates custom full-stack software without writing code and describes one's software in plain english. San Francisco, California, United States ...",
+        "source_query": "\"vly ai\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "confidence": 1.0
+      },
+      {
+        "title": "Jobs at vly.ai",
+        "link": "https://www.ycombinator.com/companies/vly-ai-2/jobs",
+        "snippet": "Why you should join vly.ai \u00b7 Want to ship features into production day-of? \u00b7 Want work so exciting it doesn't even feel like a job? \u00b7 Want direct responsibility ...",
+        "source_query": "\"vly ai\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "confidence": 1.0
+      },
+      {
+        "title": "vly.ai - Funding, Financials, Valuation & Investors",
+        "link": "https://www.crunchbase.com/organization/vly-ai/company_financials",
+        "snippet": "vly.ai creates custom full-stack software without writing code and describes one's software in plain english.",
+        "source_query": "\"vly ai\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "confidence": 1.0
+      },
+      {
+        "title": "Full-Stack + Applied AI Software Engineering Intern at vly.ai",
+        "link": "https://www.ycombinator.com/companies/vly-ai-2/jobs/5xe004o-full-stack-applied-ai-software-engineering-intern",
+        "snippet": "Shape the system that will build the next generation of software, only at vly ai. vly.ai. Founded:2024. Batch:F24. Team Size:2. Status: Active. Location ...",
+        "source_query": "\"vly ai\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "confidence": 1.0
+      },
+      {
+        "title": "vly.ai - 2025 Funding Rounds & List of Investors",
+        "link": "https://tracxn.com/d/companies/vly.ai/__lNWl0BS78ALyb035-nRZZBhsyddlcrQJZFZROgoUA74/funding-and-investors",
+        "snippet": "vly.ai has raised a total funding of $500K over 1 round from 1 investor. Investor includes Y Combinator. Their latest funding round was of ...",
+        "source_query": "\"vly ai\" funding OR investors OR raised",
+        "confidence": 0.81
+      },
+      {
+        "title": "vly.ai - 2025 Company Profile, Funding & Competitors",
+        "link": "https://tracxn.com/d/companies/vly.ai/__lNWl0BS78ALyb035-nRZZBhsyddlcrQJZFZROgoUA74",
+        "snippet": "vly.ai has raised a total funding of $500K over 1 round. Its latest funding round was a Seed round on 2024 for $500K. 1 investor participated in its latest ...",
+        "source_query": "\"vly ai\" funding OR investors OR raised",
+        "confidence": 0.8
+      },
+      {
+        "title": "Vly Labs - Valuation, Funding & Investors",
+        "link": "https://pitchbook.com/profiles/company/720886-42",
+        "snippet": "... vly.ai. Ownership Status. Privately Held (backing). Financing Status. Venture ... How much funding has Vly Labs raised over time? Vly Labs has raised $1M ...",
+        "source_query": "\"vly ai\" funding OR investors OR raised",
+        "confidence": 0.79
+      },
+      {
+        "title": "Treeo VC - Backing Immigrant Founders Shaping the Future",
+        "link": "https://www.treeo.vc/",
+        "snippet": "vly.ai lets businesses build scalable, production-ready apps with no-code ... The information provided on this website is for informational purposes ...",
+        "source_query": "\"vly ai\" official website",
+        "confidence": 0.81
+      },
+      {
+        "title": "Founding engineer at 14.ai",
+        "link": "https://www.ycombinator.com/companies/14-ai/jobs/Vcmqv7Z-founding-engineer",
+        "snippet": "We are an intense, tightly-knit team based in Lower Haight, San Francisco. Our ... vly.ai \u00b7 Full-Stack + Applied AI Software Engineering Intern. Skio.",
+        "source_query": "\"vly ai\" founders OR team OR leadership",
         "confidence": 1.0
       }
     ],
-    "traction": [],
-    "tech": [],
+    "traction": [
+      {
+        "title": "vly.ai revenue, team size, customer count, churn, and more in...",
+        "link": "https://getlatka.com/companies/vly.ai",
+        "snippet": "How much funding does vly.ai have? vly.ai raised $0. How many employees does vly.ai have? vly.ai has 3 employees.",
+        "source_query": "\"vly ai\" funding OR investors OR raised",
+        "confidence": 0.76
+      },
+      {
+        "title": "vly.ai revenue, team size, customer count, churn, and more in...",
+        "link": "https://getlatka.com/companies/vly.ai/team",
+        "snippet": "How much funding does vly.ai have? vly.ai raised $0. How many employees does vly.ai have? vly.ai has 3 employees.",
+        "source_query": "\"vly ai\" funding OR investors OR raised",
+        "confidence": 0.76
+      },
+      {
+        "title": "Turn Customer Data into Actionable Intelligence",
+        "link": "https://www.quivly.ai/products/insights",
+        "snippet": "Leverage AI to analyze customer behavior, predict trends, and uncover growth opportunities. Get a 360\u00b0 view of your customer base with real-time insights.",
+        "source_query": "\"vly ai\" official website",
+        "confidence": 0.81
+      }
+    ],
+    "tech": [
+      {
+        "title": "vly.ai: Introduction",
+        "link": "https://vlyai.mintlify.app/",
+        "snippet": "What does vly.ai do? We're a platform that lets you create full-stack web apps automatically with AI.",
+        "source_query": "\"vly ai\" official website",
+        "confidence": 0.77
+      },
+      {
+        "title": "Vly AI: AI-Powered Solutions For Data Analytics ...",
+        "link": "https://aichief.com/ai-business-tools/vly-ai/",
+        "snippet": "Vly AI is an artificial intelligence platform designed to empower businesses with data analytics and automation tools.",
+        "source_query": "\"vly ai\" official website",
+        "confidence": 0.75
+      },
+      {
+        "title": "Vly AI - AI Tool For Saas development",
+        "link": "https://theresanaiforthat.com/ai/vly-ai/",
+        "snippet": "vly.ai is a full-stack, AI-powered software development platform designed to facilitate the creation of robust, scalable SaaS applications.",
+        "source_query": "\"vly ai\" official website",
+        "confidence": 0.77
+      },
+      {
+        "title": "vly.ai (@vly_ai) / X",
+        "link": "https://x.com/vly_ai",
+        "snippet": "The Full-Stack Dev Team, Automated with AI. San Francisco vly.ai Joined May 2024. 8 Following \u00b7 129 Followers \u00b7 Posts \u00b7 Replies \u00b7 Media. vly.ai's posts. vly.ai ...",
+        "source_query": "\"vly ai\" founders OR team OR leadership",
+        "confidence": 0.77
+      },
+      {
+        "title": "Manav Bokinala Research by SuperAGI",
+        "link": "https://sales.superagi.com/contact/manav-bokinala",
+        "snippet": "Manav Bokinala. Co-Founder and CTO at vly.ai. Professional Overview. Manav Bokinala is a seasoned technology leader with extensive experience in software ...",
+        "source_query": "\"vly ai\" founders OR team OR leadership",
+        "confidence": 0.76
+      }
+    ],
     "team": [
       {
         "title": "vly.ai (YC F24)",
         "link": "https://www.linkedin.com/company/vly-ai",
         "snippet": "vly.ai just launched on YC, and is creating the next generation of web software automation. For companies and non-technical founders: this is a game-changer ...",
-        "position": 2,
-        "query": "\"vly ai\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "source_query": "\"vly ai\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
         "confidence": 1.0
       },
       {
         "title": "Victor Cheng - Co-Founder and CEO - vly.ai (YC F24)",
         "link": "https://www.linkedin.com/in/victor-abel",
         "snippet": "Outperforms Lovable, replit, and bolt. \"It's the best all around AI IDE I've seen and I've tried all of them.\" - vly ai user.",
-        "position": 3,
-        "query": "\"vly ai\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "source_query": "\"vly ai\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
         "confidence": 1.0
+      },
+      {
+        "title": "vly.ai (YC F24) is the easiest way to create custom full- ...",
+        "link": "https://www.linkedin.com/posts/y-combinator_vlyai-yc-f24-is-the-easiest-way-to-create-activity-7262177777733296129-voSF",
+        "snippet": "vly.ai (YC F24) is the easiest way to create custom full-stack software without code. By combining expert guidance with no-code automation, apps are delivered ...",
+        "source_query": "\"vly ai\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "confidence": 1.0
+      },
+      {
+        "title": "Manav Bokinala - Co-Founder, CTO - vly.ai",
+        "link": "https://www.linkedin.com/in/mbokinala",
+        "snippet": "Cofounder @ vly.ai (YC F24) \u00b7 Experience: vly.ai \u00b7 Education: Purdue University \u00b7 Location: San Francisco Bay Area \u00b7 500+ connections on LinkedIn.",
+        "source_query": "\"vly ai\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "confidence": 1.0
+      },
+      {
+        "title": "vly.ai Launches: Automated Full-Stack Web Development | Fondo",
+        "link": "https://www.linkedin.com/posts/fondohq_founderjournal-vlyai-launches-automated-activity-7264370765276286977-yGv8",
+        "snippet": "vly.ai (YC F24) launched! Automated full-stack web development \"The easiest way to build custom full-stack software without code\" www.vly.ai \u2728 Experts\u2026",
+        "source_query": "\"vly ai\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "confidence": 1.0
+      },
+      {
+        "title": "vly.ai",
+        "link": "https://vly.ai/",
+        "snippet": "From eight-figure CEOs to top hackathon winners, vly is used by the most innovative builders in the world. YC. \"vly.ai helps us ...",
+        "source_query": "\"vly ai\" funding OR investors OR raised",
+        "confidence": 0.76
       }
     ],
-    "product": [],
-    "market": [],
-    "press": [],
-    "reviews": [],
-    "other": []
-  },
-  "profile_metadata": {
-    "query_mode": "targeted",
-    "enriched": false,
-    "timestamp": "2025-06-22T07:30:46.248528"
+    "other": [
+      {
+        "title": "compare the differences between vly.ai vs Veo3",
+        "link": "https://www.toolify.ai/compare/vly-ai-vs-veo3",
+        "snippet": "vly.ai is the one with 3.7K monthly visits and 00:01:24 Avg.visit duration. vly.ai has a Page per visit of 1.91 and a bounce rate of 50.82%.",
+        "source_query": "\"vly ai\" official website",
+        "confidence": 0.0
+      },
+      {
+        "title": "compare the differences between Antispace vs vly.ai",
+        "link": "https://www.toolify.ai/compare/antispace-vs-vly-ai",
+        "snippet": "Use cases for vly.ai \u00b7 Quickly build and launch fully functional SaaS applications \u00b7 Create custom web applications without coding.",
+        "source_query": "\"vly ai\" official website",
+        "confidence": 0.0
+      },
+      {
+        "title": "vly.ai Management Team | Org Chart",
+        "link": "https://rocketreach.co/vlyai-management_b6cdcb6cc777bd6f",
+        "snippet": "vly.ai employs 4 employees. The vly.ai management team includes Victor Cheng (Co-Founder and CEO), Manav Bokinala (Co-Founder, CTO), and Wynston Phan ...",
+        "source_query": "\"vly ai\" founders OR team OR leadership",
+        "confidence": 0.0
+      }
+    ]
   }
 }

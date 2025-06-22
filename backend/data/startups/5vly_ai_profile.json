@@ -1,0 +1,93 @@
+{
+  "company_name": "vly ai",
+  "summary": "vly.ai is building the world's best AI full-stack developer, fully run on the web. They focus on automating web software development to empower companies and non-technical founders.",
+  "product": {
+    "key_features": [
+      "Automates full-stack development tasks using AI",
+      "Runs completely on the web, providing easy access",
+      "Next-generation web software automation for diverse users"
+    ],
+    "value_proposition": "Provides an AI-powered full-stack developer that simplifies and accelerates web software creation, making development accessible to non-technical founders and companies."
+  },
+  "team": {
+    "founders": [
+      "Victor Cheng, Co-Founder and CEO"
+    ],
+    "key_members": []
+  },
+  "traction": {
+    "signals": "Launched on YC F24; user feedback highlights outperforming competitors like Lovable, Replit, and Bolt; recognized as the best all-around AI IDE by users."
+  },
+  "funding": {
+    "details": "Funded through YC (Y Combinator) F24 batch; no specific amounts or investors disclosed."
+  },
+  "market": {
+    "industry": "AI-powered software development tools",
+    "competitors": [
+      "Lovable",
+      "Replit",
+      "Bolt"
+    ],
+    "potential_fit": "Positioned as a game-changing AI IDE for web development, targeting companies and non-technical founders seeking automation and efficiency in software creation."
+  },
+  "tech_stack": {
+    "details": null
+  },
+  "press_coverage": {
+    "highlights": []
+  },
+  "reviews": {
+    "summary": "Highly positive user reviews emphasize superior performance compared to competitors and praise it as the best all-around AI IDE experienced."
+  },
+  "confidence_scores": {
+    "funding": 1.0,
+    "team": 1.0
+  },
+  "category_counts": {
+    "funding": 1,
+    "team": 2
+  },
+  "raw_data": {
+    "company_website": [],
+    "funding": [
+      {
+        "title": "vly.ai: Automating the full-stack developer",
+        "link": "https://www.ycombinator.com/companies/vly-ai-2",
+        "snippet": "Automating the full-stack developer. vly.ai is building the world's best AI full-stack developer, run completely on the web. Active Founders.",
+        "position": 1,
+        "query": "\"vly ai\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "confidence": 1.0
+      }
+    ],
+    "traction": [],
+    "tech": [],
+    "team": [
+      {
+        "title": "vly.ai (YC F24)",
+        "link": "https://www.linkedin.com/company/vly-ai",
+        "snippet": "vly.ai just launched on YC, and is creating the next generation of web software automation. For companies and non-technical founders: this is a game-changer ...",
+        "position": 2,
+        "query": "\"vly ai\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "confidence": 1.0
+      },
+      {
+        "title": "Victor Cheng - Co-Founder and CEO - vly.ai (YC F24)",
+        "link": "https://www.linkedin.com/in/victor-abel",
+        "snippet": "Outperforms Lovable, replit, and bolt. \"It's the best all around AI IDE I've seen and I've tried all of them.\" - vly ai user.",
+        "position": 3,
+        "query": "\"vly ai\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "confidence": 1.0
+      }
+    ],
+    "product": [],
+    "market": [],
+    "press": [],
+    "reviews": [],
+    "other": []
+  },
+  "profile_metadata": {
+    "query_mode": "targeted",
+    "enriched": false,
+    "timestamp": "2025-06-22T06:43:12.950042"
+  }
+}

@@ -1,0 +1,295 @@
+{
+  "company_name": "Stripe",
+  "summary": "Stripe is a global technology company that builds economic infrastructure for the internet, providing online payment processing and commerce solutions for businesses.",
+  "product": "Stripe offers an API technology platform that enables businesses to manage payments, refunds, and disputes, facilitating seamless online transactions.",
+  "team": "unknown",
+  "traction": "Stripe has millions of users, ranging from the world's largest enterprises to ambitious startups, indicating strong market validation.",
+  "funding": {
+    "total_funding": "$9.4B",
+    "funding_rounds": 20,
+    "latest_funding": {
+      "amount": "$6.5B",
+      "date": "April 12, 2024",
+      "type": "Secondary Market"
+    }
+  },
+  "market": "Stripe operates in the online payment processing market, catering to internet businesses of all sizes.",
+  "tech_stack": "unknown",
+  "sources": [
+    "https://www.ycombinator.com/companies/stripe",
+    "https://www.crunchbase.com/organization/stripe/company_financials",
+    "https://stripe.com/newsroom/news/stripe-series-i-employee-liquidity",
+    "https://www.linkedin.com/company/stripe/posts/?feedView=all",
+    "https://www.crunchbase.com/organization/stripe",
+    "https://www.linkedin.com/company/stripe"
+  ],
+  "confidence_scores": {
+    "company_website": 1.0,
+    "funding": 0.91,
+    "team": 1.0,
+    "other": 0.0
+  },
+  "category_counts": {
+    "company_website": 23,
+    "funding": 3,
+    "team": 8,
+    "other": 1
+  },
+  "raw_data": {
+    "company_website": [
+      {
+        "title": "Stripe: Economic infrastructure for the internet.",
+        "link": "https://www.ycombinator.com/companies/stripe",
+        "snippet": "Launched out of Y Combinator's 2009 Summer batch, Stripe is a global technology company that builds economic infrastructure for the internet.",
+        "source_query": "\"stripe\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "confidence": 1.0
+      },
+      {
+        "title": "Stripe announces new round of funding and plan to ...",
+        "link": "https://stripe.com/newsroom/news/stripe-series-i-employee-liquidity",
+        "snippet": "Stripe, which builds economic infrastructure for the internet, has signed agreements for a Series I fundraise of more than $6.5 billion (\u20ac6.15 billion) at a $ ...",
+        "source_query": "\"stripe\" funding OR investors OR raised",
+        "confidence": 1.0
+      },
+      {
+        "title": "Stripe raises $694m through share sale to provide ...",
+        "link": "https://www.fintechfutures.com/venture-capital-funding/stripe-raises-694m-through-share-sale-to-provide-employee-liquidity",
+        "snippet": "Fintech heavyweight Stripe has raised $694.2 million in the tender offer it announced at the end of February, according to a regulatory filing.",
+        "source_query": "\"stripe\" funding OR investors OR raised",
+        "confidence": 1.0
+      },
+      {
+        "title": "Stripe - 2025 Funding Rounds & List of Investors",
+        "link": "https://tracxn.com/d/companies/stripe/__uahG_IGnVgsUsOG-f8otYHLkOkliWg7YFhJ5ZkNIkpI/funding-and-investors",
+        "snippet": "Stripe has raised a total funding of $9.81B over 24 rounds from 119 investors. Investors include Glynn Capital, Silver Lake and 117 others.",
+        "source_query": "\"stripe\" funding OR investors OR raised",
+        "confidence": 1.0
+      },
+      {
+        "title": "Fintech giant Stripe says raised $694 mln in tender offer",
+        "link": "https://www.reuters.com/business/finance/fintech-giant-stripe-raises-nearly-694-mln-funds-2024-04-12/",
+        "snippet": "Stripe said on Friday it had raised $694.2 million in the tender offer it had announced in February, when it agreed to let employees sell some of their shares.",
+        "source_query": "\"stripe\" funding OR investors OR raised",
+        "confidence": 1.0
+      },
+      {
+        "title": "Stripe hits a $91 billion valuation amid 'lumpy' payments ...",
+        "link": "https://fortune.com/2025/02/27/stripe-valuation-tech-venture-capital-silicon-valley/",
+        "snippet": "In 2021, Stripe hit its peak valuation of $95 billion during a $600 million funding round. At the time, Stripe's sales soared because of the ...",
+        "source_query": "\"stripe\" funding OR investors OR raised",
+        "confidence": 1.0
+      },
+      {
+        "title": "Fund Stripe stock options",
+        "link": "https://equitybee.com/companies/company?company=stripe",
+        "snippet": "Stripe has raised a total of $2.3 billion over 21 funding rounds; the company's latest funding rounds were a $600 million Series H round in March 2021.",
+        "source_query": "\"stripe\" funding OR investors OR raised",
+        "confidence": 1.0
+      },
+      {
+        "title": "Stripe Funding Information",
+        "link": "https://wellfound.com/company/stripe/funding",
+        "snippet": "View information about the Stripe funding at Wellfound! Find out about the total amount raised, the number of rounds, and other funding information from ...",
+        "source_query": "\"stripe\" funding OR investors OR raised",
+        "confidence": 1.0
+      },
+      {
+        "title": "Stripe slashes valuation to $50 billion in new $6.5 ...",
+        "link": "https://www.cnbc.com/2023/03/15/stripe-raises-series-i-billion-at-sharply-reduced-50-billion-valuation.html",
+        "snippet": "Payment processor Stripe raised $6.5 billion, largely to provide liquidity to current and former employees. The financing round values the ...",
+        "source_query": "\"stripe\" funding OR investors OR raised",
+        "confidence": 1.0
+      },
+      {
+        "title": "Stripe | Financial Infrastructure to Grow Your Revenue",
+        "link": "https://stripe.com/",
+        "snippet": "Stripe is a suite of APIs powering online payment processing and commerce solutions for internet businesses of all sizes. Accept payments and scale faster ...",
+        "source_query": "\"stripe\" official website",
+        "confidence": 1.0
+      },
+      {
+        "title": "Sign Up and Create a Stripe Account",
+        "link": "https://dashboard.stripe.com/register",
+        "snippet": "Sign up to quickly create a new Stripe account today and get started accepting payments in minutes.",
+        "source_query": "\"stripe\" official website",
+        "confidence": 1.0
+      },
+      {
+        "title": "Global Payment Processing Platform",
+        "link": "https://stripe.com/payments",
+        "snippet": "Increase revenue and save thousands of engineering hours with prebuilt payment UIs, easy access to more than 100 payment methods, and Link, Stripe's one-click ...",
+        "source_query": "\"stripe\" official website",
+        "confidence": 1.0
+      },
+      {
+        "title": "Pricing & Fees",
+        "link": "https://stripe.com/pricing",
+        "snippet": "Find Stripe fees and pricing information. Find our processing fees for credit cards, pricing models and pay-as-you-go fees for businesses.",
+        "source_query": "\"stripe\" official website",
+        "confidence": 1.0
+      },
+      {
+        "title": "Stripe global availability",
+        "link": "https://stripe.com/global",
+        "snippet": "No matter what country you're based in, you can use Atlas to easily incorporate a U.S. company, set up a U.S. bank account, and activate payments with Stripe.",
+        "source_query": "\"stripe\" official website",
+        "confidence": 1.0
+      },
+      {
+        "title": "Contact Us",
+        "link": "https://stripe.com/contact",
+        "snippet": "Need help with your Stripe account, have a media inquiry, or want to know more about a Stripe product? Contact us.",
+        "source_query": "\"stripe\" official website",
+        "confidence": 1.0
+      },
+      {
+        "title": "Stripe Connect | Platform and Marketplace Payment ...",
+        "link": "https://stripe.com/connect",
+        "snippet": "Stripe Connect is the fastest and easiest way to integrate payments and financial services into your software platform or marketplace.",
+        "source_query": "\"stripe\" official website",
+        "confidence": 1.0
+      },
+      {
+        "title": "Stripe Documentation",
+        "link": "https://docs.stripe.com/",
+        "snippet": "Explore our guides and examples to integrate Stripe. Get started with payments. Browse by product. Payments. Payments. Online payments. Terminal.",
+        "source_query": "\"stripe\" official website",
+        "confidence": 1.0
+      },
+      {
+        "title": "Stripe Newsroom | Information and assets",
+        "link": "https://stripe.com/newsroom/information",
+        "snippet": "Stripe is a technology company that builds economic infrastructure for the internet. Businesses of every size\u2014from new startups to public companies\u2014use our ...",
+        "source_query": "\"stripe\" official website",
+        "confidence": 1.0
+      },
+      {
+        "title": "The Collison Brothers and Story Behind The Founding Of ...",
+        "link": "https://www.startupgrind.com/blog/the-collison-brothers-and-story-behind-the-founding-of-stripe/",
+        "snippet": "Read on for Startup Grind's original Stripe founding story, with your founders and protagonists, Patrick and John Collison, and check out our interviews.",
+        "source_query": "\"stripe\" founders OR team OR leadership",
+        "confidence": 1.0
+      },
+      {
+        "title": "Stripe's Founders: The Story of Collison Brothers",
+        "link": "https://kitrum.com/blog/stripe-founders-the-story-of-collison-brothers/",
+        "snippet": "Patrick and John Collison came to the USA from a small village in Ireland at a young age. Following their entrepreneurial dream, they founded Stripe in 2010.",
+        "source_query": "\"stripe\" founders OR team OR leadership",
+        "confidence": 1.0
+      },
+      {
+        "title": "Stripe - Leadership Team",
+        "link": "https://theorg.com/org/stripe/teams/leadership-team-1",
+        "snippet": "The Leadership Team at Stripe drives the strategic vision and operational execution of the company's initiatives in the financial technology space.",
+        "source_query": "\"stripe\" founders OR team OR leadership",
+        "confidence": 1.0
+      },
+      {
+        "title": "Building the executive team",
+        "link": "https://stripe.com/guides/atlas/building-the-executive-team",
+        "snippet": "This guide is an excerpt from Elad's book, High Growth Handbook, published by Stripe Press. It presents a playbook for navigating the most complex challenges ...",
+        "source_query": "\"stripe\" founders OR team OR leadership",
+        "confidence": 1.0
+      },
+      {
+        "title": "Stripe, Inc.",
+        "link": "https://en.wikipedia.org/wiki/Stripe,_Inc.",
+        "snippet": "Stripe, Inc. ; Financial services \u00b7 Payment processor \u00b7 2010; 15 years ago (2010) \u00b7 Patrick and John Collison \u00b7 South San Francisco, California, U.S. and. Dublin, ...",
+        "source_query": "\"stripe\" founders OR team OR leadership",
+        "confidence": 1.0
+      }
+    ],
+    "funding": [
+      {
+        "title": "Stripe - Crunchbase Company Profile & Funding",
+        "link": "https://www.crunchbase.com/organization/stripe",
+        "snippet": "Stripe is an API technology company that provides online payment processing and commerce solutions for Internet businesses.",
+        "source_query": "\"stripe\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "confidence": 1.0
+      },
+      {
+        "title": "Stripe - Funding, Financials, Valuation & Investors",
+        "link": "https://www.crunchbase.com/organization/stripe/company_financials",
+        "snippet": "Stripe has raised a total of $9.4B in funding over 20 rounds. Their latest funding was raised on Apr 12, 2024 from a Secondary Market round.",
+        "source_query": "\"stripe\" funding OR investors OR raised",
+        "confidence": 1.0
+      },
+      {
+        "title": "Patrick Collison",
+        "link": "https://en.wikipedia.org/wiki/Patrick_Collison",
+        "snippet": "Patrick Collison (born 9 September 1988) is an Irish entrepreneur. He is the co-founder and current CEO of Stripe, which he started with his younger brother ...",
+        "source_query": "\"stripe\" founders OR team OR leadership",
+        "confidence": 0.73
+      }
+    ],
+    "traction": [],
+    "tech": [],
+    "team": [
+      {
+        "title": "Stripe",
+        "link": "https://www.linkedin.com/company/stripe",
+        "snippet": "Stripe is a financial infrastructure platform for businesses. Millions of companies\u2014from the world's largest enterprises to the most ambitious ...",
+        "source_query": "\"stripe\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "confidence": 1.0
+      },
+      {
+        "title": "Stripe",
+        "link": "https://www.linkedin.com/company/stripe/posts/?feedView=all",
+        "snippet": "No information is available for this page.",
+        "source_query": "\"stripe\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "confidence": 1.0
+      },
+      {
+        "title": "Stripe: Jobs",
+        "link": "https://www.linkedin.com/company/stripe/jobs",
+        "snippet": "Jobs at Stripe \u00b7 Software Engineer, Infrastructure \u00b7 Marketing Campaigns Manager, Sales Programs \u00b7 Staff Product Manager, Atlas \u00b7 Product Manager, Optimized ...",
+        "source_query": "\"stripe\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "confidence": 1.0
+      },
+      {
+        "title": "Verifone and Stripe partner for in-person payments.",
+        "link": "https://www.linkedin.com/posts/verifone_verifone-and-stripe-are-partnering-to-power-activity-7325925851982639105-5qPu",
+        "snippet": "Verifone and Stripe are partnering to power the next era of in-person payments. Stripe's financial infrastructure now runs natively on ...",
+        "source_query": "\"stripe\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "confidence": 1.0
+      },
+      {
+        "title": "John Collison - Stripe",
+        "link": "https://www.linkedin.com/in/johnbcollison",
+        "snippet": "Experience: Stripe Graphic, Stripe, Education: Harvard University Graphic, Harvard College, 2009 - 2010, Licenses & Certifications: Aircraft Flight Instructor.",
+        "source_query": "\"stripe\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "confidence": 1.0
+      },
+      {
+        "title": "Stripe",
+        "link": "https://www.linkedin.com/company/stripe/life/cdb54884-f140-4e16-8ded-e1fc5bbcc63b/",
+        "snippet": "No information is available for this page.",
+        "source_query": "\"stripe\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "confidence": 1.0
+      },
+      {
+        "title": "Introducing Stripe Startups\u2014a program offering founders ...",
+        "link": "https://www.linkedin.com/posts/stripe_introducing-stripe-startupsa-program-offering-activity-7328145714461507584-u7gt",
+        "snippet": "Introducing Stripe Startups\u2014a program offering founders fee credits, expert insights, personalized advice, and community.",
+        "source_query": "\"stripe\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "confidence": 1.0
+      },
+      {
+        "title": "Patrick Collison - Stripe",
+        "link": "https://www.linkedin.com/in/patrickcollison",
+        "snippet": "Patrick Collison is an influencer. Stripe Massachusetts Institute of Technology. San Francisco Bay Area. 26K followers 499 connections.",
+        "source_query": "\"stripe\" founders OR team OR leadership",
+        "confidence": 1.0
+      }
+    ],
+    "other": [
+      {
+        "title": "Stripe Login | Sign in to the Stripe Dashboard",
+        "link": "https://dashboard.stripe.com/login",
+        "snippet": "Sign in to the Stripe Dashboard to manage business payments and operations in your account. Manage payments and refunds, respond to disputes and more.",
+        "source_query": "\"stripe\" official website",
+        "confidence": 0.0
+      }
+    ]
+  }
+}

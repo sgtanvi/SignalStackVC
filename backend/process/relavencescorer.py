@@ -9,7 +9,6 @@ from dotenv import load_dotenv
 from openai import OpenAI
 import numpy as np
 
-# from process.pdf_text_extractor import extract_text_with_fallback_url
 from process.keyword_score import score_keywords
 
 load_dotenv()
@@ -31,10 +30,9 @@ def cosine_similarity(a: np.ndarray, b: np.ndarray) -> float:
     """
     return float(np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b)))
 
-def compute_scores(urls: list[str], keywords: list[str], context: str):
+def compute_scores(texts: list[str], keywords: list[str], context: str):
     """
-    For each PDF URL:
-      - Extract text via Mistral OCR fallback
+    For each text:
       - Compute keyword match score
       - Compute semantic similarity to the context
       - Combine into a final relevance score
@@ -43,79 +41,54 @@ def compute_scores(urls: list[str], keywords: list[str], context: str):
     context_embedding = get_embedding(context)
 
     results = []
-    for url in urls:
+    for i, text in enumerate(texts):
         try:
-            # 1) Download & extract text
-            text = extract_text_with_fallback_url(url)
-
-            # 2) Keyword-based score (0–1)
+            # 1) Keyword-based score (0–1)
             kw_score = score_keywords(text, keywords)
 
-            # 3) Semantic score (cosine similarity)
+            # 2) Semantic score (cosine similarity)
             snippet = text[:2000]
             doc_embedding = get_embedding(snippet)
             sem_score = cosine_similarity(context_embedding, doc_embedding)
 
-            # 4) Combine scores
+            # 3) Combine scores
             final_score = 0.6 * kw_score + 0.4 * sem_score
 
             results.append({
-                "url": url,
+                "text_index": i,
                 "keyword_score":   round(kw_score, 3),
                 "semantic_score":  round(sem_score, 3),
                 "final_score":     round(final_score, 3)
             })
         except Exception as e:
             results.append({
-                "url": url,
+                "text_index": i,
                 "error": str(e)
             })
 
     return results
 
 def main():
-    # 1) Load URLs from CSV (limit to first 10 for speed)
-    urls = []
-    with open("data/pdf_links.csv", newline="", encoding="utf-8") as csvfile:
-        reader = csv.DictReader(csvfile)
-        for i, row in enumerate(reader):
-            if i >= 10:  # Only process first 10 PDFs for speed
-                break
-            urls.append(row["url"])
+    # Example usage with sample data
+    sample_texts = [
+        "This is a sample text about AI and machine learning.",
+        "Another text about funding and venture capital.",
+        "A third text about technology and software development."
+    ]
+    
+    keywords = ["ai", "funding", "technology"]
+    context = "Startup intelligence and venture capital"
 
-    # 2) Load user payload
-    with open("data/user_payload.json", "r", encoding="utf-8") as f:
-        payload = json.load(f)
-    keywords = [k.strip().lower() for k in payload.get("input_labels", [])]
-    context  = payload.get("ai_usecase", "")
+    # Compute relevance scores
+    results = compute_scores(sample_texts, keywords, context)
 
-    # 3) Compute relevance scores
-    results = compute_scores(urls, keywords, context)
-
-    # 4) Print to console
+    # Print to console
     print("\nRelevance Scores:")
     for r in results:
         if "final_score" in r:
-            print(f"{r['url']} → kw:{r['keyword_score']}  sem:{r['semantic_score']}  final:{r['final_score']}")
+            print(f"Text {r['text_index']} → kw:{r['keyword_score']}  sem:{r['semantic_score']}  final:{r['final_score']}")
         else:
-            print(f"{r['url']} → ERROR: {r['error']}")
-
-    # 5) Save to CSV
-    os.makedirs("data", exist_ok=True)
-    out_path = "data/pdf_scores.csv"
-    with open(out_path, "w", newline="", encoding="utf-8") as csvfile:
-        fieldnames = ["url", "keyword_score", "semantic_score", "final_score", "error"]
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        writer.writeheader()
-        for r in results:
-            writer.writerow({
-                "url":            r.get("url", ""),
-                "keyword_score":  r.get("keyword_score", ""),
-                "semantic_score": r.get("semantic_score", ""),
-                "final_score":    r.get("final_score", ""),
-                "error":          r.get("error", "")
-            })
-    print(f"\nSaved detailed scores to {out_path}")
+            print(f"Text {r['text_index']} → ERROR: {r['error']}")
 
 if __name__ == "__main__":
     main()
