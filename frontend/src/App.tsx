@@ -2,76 +2,49 @@ import React, { useState } from 'react';
 import { Globe, Squirrel, TrendingUp, Search, Sparkle, Users, Filter, Tag, ExternalLink, ListCheck, Rocket, 
   Github, Linkedin, Star, Eye, Bell 
       } from 'lucide-react';
+import axios from 'axios';
 
 const SignalStackVC = () => {
+  // State for the search input
   const [searchUrl, setSearchUrl] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [watchlist, setWatchlist] = useState([]);
   const [activeTab, setActiveTab] = useState('search');
   const [selectedStartup, setSelectedStartup] = useState(null);
-
-  //mock data for boilerplate / demo
-  const mockStartups = [
-    {
-      id: 1,
-      name: "FlowAI",
-      url: "https://flow.ai",
-      description: "AI-powered workflow automation platform that helps teams eliminate repetitive tasks and focus on high-impact work.",
-      category: "AI/ML",
-      stage: "Series A",
-      funding: "$12M",
-      team: 24,
-      founded: "2022",
-      traction: {
-        productHunt: { votes: 1247, rank: "#2 Product of the Day" },
-        github: { stars: 3400, commits: 892 },
-        linkedin: { employees: 24, growth: "+35% (6mo)" }
-      },
-      signals: {
-        hot: true,
-        funding: "Recent Series A",
-        hiring: "5 new hires this month",
-        product: "Major feature launch"
-      },
-      notes: "Strong product-market fit in enterprise automation",
-      tags: ["AI", "Enterprise", "Automation"]
-    },
-    {
-      id: 2,
-      name: "CarbonScale",
-      url: "https://carbonscale.io",
-      description: "Carbon accounting and ESG reporting platform for mid-market companies looking to track and reduce their environmental impact.",
-      category: "Climate Tech",
-      stage: "Seed",
-      funding: "$3.2M",
-      team: 12,
-      founded: "2023",
-      traction: {
-        productHunt: { votes: 892, rank: "#5 Product of the Day" },
-        github: { stars: 156, commits: 234 },
-        linkedin: { employees: 12, growth: "+20% (3mo)" }
-      },
-      signals: {
-        hot: false,
-        funding: "Seed closed Q1 2024",
-        hiring: "2 new hires this month",
-        product: "API integrations live"
-      },
-      notes: "Interesting climate tech play, strong founder background",
-      tags: ["Climate", "SaaS", "ESG"]
-    }
-  ];
+  
+  // Create a separate handler for input changes
+  const handleSearchInputChange = (e) => {
+    setSearchUrl(e.target.value);
+  };
 
   const handleSearch = async () => {
     if (!searchUrl.trim()) return;
     
     setIsLoading(true);
-    // Simulate API call
-    setTimeout(() => {
-      setIsLoading(false);
-      setSelectedStartup(mockStartups[0]);
+    
+    try {
+      // Extract startup name from URL or use as is
+      const startupName = extractStartupName(searchUrl);
+      
+      // Call your backend API
+      const response = await axios.post('/api/analyze-startup', {
+        startup_name: startupName,
+        query_mode: 'hybrid',
+        enrich_content: false
+      });
+      
+      // Transform backend data to frontend format
+      const startupData = transformProfileData(response.data);
+      
+      setSelectedStartup(startupData);
       setActiveTab('profile');
-    }, 2000);
+    } catch (error) {
+      console.error('Error analyzing startup:', error);
+      // Show error message to user
+      alert('Failed to analyze startup. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const addToWatchlist = (startup) => {
@@ -108,8 +81,11 @@ const SignalStackVC = () => {
                 type="text"
                 placeholder="Paste startup URL or name..."
                 value={searchUrl}
-                onChange={(e) => setSearchUrl(e.target.value)}
+                onChange={handleSearchInputChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900"
+                // Add these properties to prevent losing focus
+                autoFocus
+                onBlur={(e) => e.target.focus()}
               />
             </div>
             <button
@@ -151,6 +127,38 @@ const SignalStackVC = () => {
 
   const ProfileTab = () => {
     if (!selectedStartup) return <div>No startup selected</div>;
+    
+    // Add state for notes
+    const [notes, setNotes] = useState(selectedStartup.notes || "");
+    const [isSaving, setIsSaving] = useState(false);
+    
+    // Function to save notes
+    const saveNotes = async () => {
+      if (!selectedStartup) return;
+      
+      setIsSaving(true);
+      try {
+        // Call your backend API to save notes
+        await saveStartupNotes(selectedStartup.name, notes);
+        // Update local state
+        setSelectedStartup({
+          ...selectedStartup,
+          notes: notes
+        });
+      } catch (error) {
+        console.error('Error saving notes:', error);
+        alert('Failed to save notes. Please try again.');
+      } finally {
+        setIsSaving(false);
+      }
+    };
+    
+    // Add confidence indicators based on backend data
+    const getConfidenceIndicator = (score) => {
+      if (score >= 0.8) return "High";
+      if (score >= 0.5) return "Medium";
+      return "Low";
+    };
     
     return (
       <div className="max-w-6xl mx-auto">
@@ -206,7 +214,15 @@ const SignalStackVC = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Traction Signals</h3>
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-lg font-semibold text-gray-900">Traction Signals</h3>
+                    {/* Add confidence indicator from backend */}
+                    {selectedStartup.confidence_scores && (
+                      <span className="text-sm text-gray-500">
+                        Confidence: {getConfidenceIndicator(selectedStartup.confidence_scores.traction || 0)}
+                      </span>
+                    )}
+                  </div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="bg-gray-50 rounded-lg p-4">
                       <div className="flex items-center gap-2 mb-2">
@@ -234,6 +250,30 @@ const SignalStackVC = () => {
                     </div>
                   </div>
                 </div>
+
+                {/* Add new section for raw data if needed */}
+                {selectedStartup.raw_data && (
+                  <div className="mt-6 pt-6 border-t border-gray-200">
+                    <div className="flex items-center justify-between mb-3">
+                      <h3 className="text-lg font-semibold text-gray-900">Data Sources</h3>
+                      <button 
+                        className="text-sm text-blue-600 hover:text-blue-800"
+                        onClick={() => {/* Toggle showing raw data */}}
+                      >
+                        Show Raw Data
+                      </button>
+                    </div>
+                    {/* Display a summary of data sources */}
+                    <div className="text-sm text-gray-600">
+                      {Object.entries(selectedStartup.category_counts || {}).map(([category, count]) => (
+                        <div key={category} className="flex justify-between py-1">
+                          <span className="capitalize">{category.replace('_', ' ')}</span>
+                          <span>{count} sources</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">Live Signals</h3>
@@ -278,9 +318,40 @@ const SignalStackVC = () => {
                   <textarea
                     placeholder="Add your analysis and notes..."
                     className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900 h-24 resize-none"
-                    defaultValue={selectedStartup.notes}
+                    value={notes}
+                    onChange={(e) => setNotes(e.target.value)}
                   />
+                  <div className="flex justify-end mt-2">
+                    <button
+                      onClick={saveNotes}
+                      disabled={isSaving}
+                      className="px-3 py-1 bg-blue-600 text-white text-sm rounded hover:bg-blue-700 disabled:opacity-50"
+                    >
+                      {isSaving ? 'Saving...' : 'Save Notes'}
+                    </button>
+                  </div>
                 </div>
+
+                {/* Add metadata section */}
+                {selectedStartup.profile_metadata && (
+                  <div className="bg-gray-50 rounded-lg p-4">
+                    <h3 className="font-semibold text-gray-900 mb-3">Analysis Info</h3>
+                    <div className="text-sm space-y-2">
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Query Mode</span>
+                        <span className="font-medium text-gray-900 capitalize">{selectedStartup.profile_metadata.query_mode}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Enriched</span>
+                        <span className="font-medium text-gray-900">{selectedStartup.profile_metadata.enriched ? 'Yes' : 'No'}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Analyzed</span>
+                        <span className="font-medium text-gray-900">{new Date(selectedStartup.profile_metadata.timestamp).toLocaleString()}</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -405,4 +476,147 @@ const SignalStackVC = () => {
   );
 };
 
+// Helper function to extract startup name from URL
+const extractStartupName = (input: string): string => {
+  // If input is a URL, extract domain name
+  if (input.startsWith('http') || input.includes('www.')) {
+    try {
+      const url = new URL(input.startsWith('http') ? input : `https://${input}`);
+      // Get domain without TLD (e.g., "stripe" from "stripe.com")
+      const domain = url.hostname.replace('www.', '').split('.')[0];
+      return domain.charAt(0).toUpperCase() + domain.slice(1); // Capitalize
+    } catch (e) {
+      // If URL parsing fails, just return the input
+      return input;
+    }
+  }
+  return input;
+};
+
+// Function to transform backend profile data to frontend format
+const transformProfileData = (backendProfile: any) => {
+  // Create a new object that matches your frontend data structure
+  return {
+    id: Date.now(), // Generate a temporary ID
+    name: backendProfile.company_name,
+    url: backendProfile.sources?.[0] || "",
+    description: backendProfile.summary,
+    category: backendProfile.market || "Unknown",
+    stage: backendProfile.funding?.includes("Series") 
+      ? backendProfile.funding.split(" ")[0] 
+      : (backendProfile.funding?.includes("Seed") ? "Seed" : "Unknown"),
+    funding: backendProfile.funding || "Unknown",
+    team: backendProfile.team?.split(" ")?.[0] || "Unknown",
+    founded: "Unknown", // This might not be in your backend data
+    traction: {
+      productHunt: { 
+        votes: extractNumberFromText(backendProfile.traction, "Product Hunt") || 0, 
+        rank: extractRankFromText(backendProfile.traction) || "N/A" 
+      },
+      github: { 
+        stars: extractNumberFromText(backendProfile.tech_stack, "stars") || 0, 
+        commits: extractNumberFromText(backendProfile.tech_stack, "commits") || 0 
+      },
+      linkedin: { 
+        employees: extractNumberFromText(backendProfile.team, "employees") || 0, 
+        growth: extractGrowthFromText(backendProfile.team) || "N/A" 
+      }
+    },
+    signals: {
+      hot: backendProfile.traction?.toLowerCase().includes("growing") || false,
+      funding: backendProfile.funding || "No recent funding",
+      hiring: extractHiringFromText(backendProfile.team) || "No hiring data",
+      product: extractProductUpdateFromText(backendProfile.product) || "No product updates"
+    },
+    notes: "",
+    tags: generateTagsFromProfile(backendProfile)
+  };
+};
+
+// Helper functions for data extraction
+const extractNumberFromText = (text: string | null, context: string): number | null => {
+  if (!text) return null;
+  
+  // Look for numbers near the context
+  const regex = new RegExp(`\\d+\\s*(?:${context}|near\\s*${context}|${context}\\s*related)`, 'i');
+  const match = text.match(regex);
+  if (match) {
+    return parseInt(match[0].match(/\d+/)[0]);
+  }
+  
+  // Fallback: just find any number
+  const numMatch = text.match(/\d+/);
+  return numMatch ? parseInt(numMatch[0]) : null;
+};
+
+const extractRankFromText = (text: string | null): string | null => {
+  if (!text) return null;
+  
+  // Look for ranking patterns like "#1 Product of the Day"
+  const rankMatch = text.match(/#\d+\s+\w+\s+of\s+the\s+\w+/i);
+  return rankMatch ? rankMatch[0] : null;
+};
+
+const extractGrowthFromText = (text: string | null): string | null => {
+  if (!text) return null;
+  
+  // Look for growth patterns like "+20% (6mo)"
+  const growthMatch = text.match(/[+\-]\d+%\s*\(\d+\s*mo\)/i);
+  return growthMatch ? growthMatch[0] : null;
+};
+
+const extractHiringFromText = (text: string | null): string | null => {
+  if (!text) return null;
+  
+  // Look for hiring information
+  if (text.match(/hiring|recruiting|growing team/i)) {
+    const numMatch = text.match(/\d+\s*new\s*hire/i);
+    return numMatch ? numMatch[0] : "Actively hiring";
+  }
+  return null;
+};
+
+const extractProductUpdateFromText = (text: string | null): string | null => {
+  if (!text) return null;
+  
+  // Look for product update information
+  if (text.match(/launch|release|update|new feature/i)) {
+    return "Recent product updates";
+  }
+  return null;
+};
+
+const generateTagsFromProfile = (profile: any): string[] => {
+  const tags: string[] = [];
+  
+  // Add market/category as a tag
+  if (profile.market) {
+    tags.push(profile.market.split(" ")[0]);
+  }
+  
+  // Add tech stack tags
+  if (profile.tech_stack) {
+    const techKeywords = ["AI", "ML", "Python", "React", "Node", "Cloud", "AWS", "Mobile", "Web", "SaaS"];
+    techKeywords.forEach(keyword => {
+      if (profile.tech_stack.includes(keyword)) {
+        tags.push(keyword);
+      }
+    });
+  }
+  
+  // Add funding stage as tag
+  if (profile.funding?.includes("Series")) {
+    tags.push(profile.funding.split(" ")[0]);
+  } else if (profile.funding?.includes("Seed")) {
+    tags.push("Seed");
+  }
+  
+  // Limit to 3 tags
+  return tags.slice(0, 3);
+};
+
 export default SignalStackVC;
+
+
+
+
