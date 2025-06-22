@@ -1,135 +1,65 @@
 {
   "company_name": "vly ai",
-  "summary": "vly.ai is a seed-stage startup founded in 2024 and based in San Francisco that enables users to create custom full-stack software without writing code by describing their software needs in plain English. The company aims to automate full-stack web development, making software creation accessible and efficient.",
-  "product": "vly.ai offers an automated full-stack web development platform that translates plain English descriptions into custom software solutions without requiring coding skills. This lowers the barrier to software creation and accelerates development timelines.",
-  "team": [
-    {
-      "name": "Victor Cheng",
-      "role": "Co-Founder and CEO",
-      "tenure": "May 2024 - Present"
-    },
-    {
-      "name": "Manav Bokinala",
-      "role": "Founder / CEO"
-    }
-  ],
-  "traction": "vly.ai launched publicly as part of Y Combinator's Summer 2024 batch (YC F24), signaling early market validation and growth potential in automated software development.",
-  "funding": "vly.ai is a seed-stage company with funding details referenced across multiple sources, indicating early investment rounds supporting its development and launch.",
-  "market": "vly.ai operates in the no-code/low-code software development market, targeting businesses and individuals seeking to build custom full-stack applications quickly without traditional programming.",
-  "tech_stack": "The platform leverages natural language processing to interpret plain English software descriptions and generate full-stack code automatically, positioning English as the new programming language.",
+  "summary": "vly.ai is building the world's best AI full-stack developer that operates completely on the web. They focus on automating the full-stack development process to enable companies and non-technical founders to create web software with ease.",
+  "product": "An AI-powered full-stack developer platform that automates web software development entirely on the web, offering a next-generation web software automation experience. It aims to outperform existing AI IDEs by providing comprehensive development capabilities.",
+  "team": "Victor Cheng is the Co-Founder and CEO of vly.ai. The team recently launched on Y Combinator (YC F24) and is focused on creating innovative web software automation tools.",
+  "traction": "Launched on Y Combinator (YC F24) and has received positive user feedback, with users stating it outperforms competitors like Lovable, Replit, and Bolt. Recognized as a game-changer for companies and non-technical founders.",
+  "funding": "vly.ai has funding associated with its Y Combinator (YC F24) launch.",
+  "market": "The startup operates in the web software automation and AI development tools market, targeting companies and non-technical founders seeking to automate full-stack development.",
+  "tech_stack": "unknown",
   "sources": [
-    "https://www.crunchbase.com/organization/vly-ai",
-    "https://fondo.com/vly-ai-launches-automated-full-stack-web-development",
-    "https://www.linkedin.com/company/vly-ai",
-    "https://vly.ai",
-    "https://www.ycombinator.com/companies/vly-ai"
+    "https://www.ycombinator.com/companies/vly-ai",
+    "https://vly.ai"
   ],
+  "confidence_scores": {
+    "funding": 1.0,
+    "team": 1.0
+  },
+  "category_counts": {
+    "funding": 1,
+    "team": 2
+  },
   "raw_data": {
     "company_website": [],
     "funding": [
       {
-        "title": "vly.ai - Crunchbase Company Profile & Funding",
-        "link": "https://www.crunchbase.com/organization/vly-ai",
-        "snippet": "vly.ai creates custom full-stack software without writing code and describes one's software in plain english. San Francisco, California, United States ...",
-        "source_query": "\"vly ai\" site:com OR site:io OR site:ai OR site:co -job -career"
-      },
-      {
-        "title": "vly.ai - 2025 Company Profile, Funding & Competitors",
-        "link": "https://tracxn.com/d/companies/vly.ai/__lNWl0BS78ALyb035-nRZZBhsyddlcrQJZFZROgoUA74",
-        "snippet": "vly.ai is a seed company based in San Francisco (United States), founded in 2024. It operates as an AI powered coding assistant for developers. vly.ai has ...",
-        "source_query": "\"vly ai\" site:com OR site:io OR site:ai OR site:co -job -career"
-      },
-      {
-        "title": "vly.ai - Funding, Financials, Valuation & Investors",
-        "link": "https://www.crunchbase.com/organization/vly-ai/company_financials",
-        "snippet": "vly.ai creates custom full-stack software without writing code and describes one's software in plain english.",
-        "source_query": "\"vly ai\" site:com OR site:io OR site:ai OR site:co -job -career"
+        "title": "vly.ai: Automating the full-stack developer",
+        "link": "https://www.ycombinator.com/companies/vly-ai-2",
+        "snippet": "Automating the full-stack developer. vly.ai is building the world's best AI full-stack developer, run completely on the web. Active Founders.",
+        "position": 1,
+        "query": "\"vly ai\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "confidence": 1.0
       }
     ],
-    "traction": [
-      {
-        "title": "vly.ai Launches: Automated Full-Stack Web Development | Fondo",
-        "link": "https://www.linkedin.com/posts/fondohq_founderjournal-vlyai-launches-automated-activity-7264370765276286977-yGv8",
-        "snippet": "vly.ai (YC F24) launched! Automated full ... Skip to main content LinkedIn \u00b7 Join now Sign in. Fondo in Mountain View, CA. Expand search. Jobs ... LinkedIn \u00a9 2025 ...",
-        "source_query": "\"vly ai\" (Crunchbase OR AngelList OR \"Product Hunt\" OR GitHub OR LinkedIn) -job -career"
-      }
-    ],
+    "traction": [],
     "tech": [],
     "team": [
       {
+        "title": "vly.ai (YC F24)",
+        "link": "https://www.linkedin.com/company/vly-ai",
+        "snippet": "vly.ai just launched on YC, and is creating the next generation of web software automation. For companies and non-technical founders: this is a game-changer ...",
+        "position": 2,
+        "query": "\"vly ai\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "confidence": 1.0
+      },
+      {
         "title": "Victor Cheng - Co-Founder and CEO - vly.ai (YC F24)",
         "link": "https://www.linkedin.com/in/victor-abel",
-        "snippet": "Experience. vly.ai (YC F24) Graphic. Co-Founder and CEO. vly.ai (YC F24). May 2024 - Present 1 year 2 months. San Francisco Bay Area. Automating away full-stack ...",
-        "source_query": "\"vly ai\" site:com OR site:io OR site:ai OR site:co -job -career"
-      },
-      {
-        "title": "vly.ai (YC F24)'s Post",
-        "link": "https://www.linkedin.com/posts/vly-ai_vlyai-just-launched-on-yc-and-is-creating-activity-7262227767004413953-r8-h",
-        "snippet": "vly.ai just launched on YC, and is creating the ... LinkedIn; Facebook; Twitter; Close menu. To view or add a comment, sign in ... LinkedIn; Facebook; Twitter",
-        "source_query": "\"vly ai\" (Crunchbase OR AngelList OR \"Product Hunt\" OR GitHub OR LinkedIn) -job -career"
-      },
-      {
-        "title": "vly.ai revenue, team size, customer count, churn, and more in...",
-        "link": "https://getlatka.com/companies/vly.ai",
-        "snippet": "Founder / CEO. Manav Bokinala. icon Contact via Linkedin \u00b7 icon Contact via email ... How much revenue does vly.ai generate? vly.ai generates $0 in revenue. Click ...",
-        "source_query": "\"vly ai\" (Crunchbase OR AngelList OR \"Product Hunt\" OR GitHub OR LinkedIn) -job -career"
-      },
-      {
-        "title": "We vibe-coded our entire YC-backed startup in 3 days.",
-        "link": "https://www.linkedin.com/posts/lawrenceliuu_we-vibe-coded-our-entire-yc-backed-startup-activity-7334320719134138368-MU9k",
-        "snippet": "How we built our startup in 3 days with voice ; Victor Cheng, graphic. Victor Cheng. co-founder @ vly.ai (YC F24) | 1x exit ; Mo Battah, graphic.",
-        "source_query": "\"vly ai\" (Crunchbase OR AngelList OR \"Product Hunt\" OR GitHub OR LinkedIn) -job -career"
-      },
-      {
-        "title": "Relvy AI (YC F24)",
-        "link": "https://www.linkedin.com/company/relvyai",
-        "snippet": "vly.ai (YC F24). Software Development. San Francisco, CA. Stewdio (YC F24). Software Development. New York, NY. supercontrast (YC f24). Software ...",
-        "source_query": "\"vly ai\" (Crunchbase OR AngelList OR \"Product Hunt\" OR GitHub OR LinkedIn) -job -career"
+        "snippet": "Outperforms Lovable, replit, and bolt. \"It's the best all around AI IDE I've seen and I've tried all of them.\" - vly ai user.",
+        "position": 3,
+        "query": "\"vly ai\" site:ycombinator.com OR site:crunchbase.com OR site:linkedin.com OR site:angel.co",
+        "confidence": 1.0
       }
     ],
-    "other": [
-      {
-        "title": "Sign in to vly.ai",
-        "link": "https://vly.ai/login",
-        "snippet": "Sign in to vly.ai. Welcome back! Please sign in to continue. Sign in with Google Continue with Google. or. Email address. Continue. Don't have an account?",
-        "source_query": "\"vly ai\" site:com OR site:io OR site:ai OR site:co -job -career"
-      },
-      {
-        "title": "vly.ai",
-        "link": "https://vly.ai/signup",
-        "snippet": "English is the new programming language.",
-        "source_query": "\"vly ai\" site:com OR site:io OR site:ai OR site:co -job -career"
-      },
-      {
-        "title": "VLY $0.00000296 USD price today, Vly AI live chart, forecast",
-        "link": "https://www.dextools.io/app/en/solana/pair-explorer/AS9sG9SGdHoG8LwpZ8NFmaWefHgEA4yy3dvjcwHgjR9E",
-        "snippet": "The Vly AI live price is $0.00000296 USD with a 24h volume of $3.154 USD. Buy VLY. Check VLY airdrop and audits.",
-        "source_query": "\"vly ai\" site:com OR site:io OR site:ai OR site:co -job -career"
-      },
-      {
-        "title": "Vly.ai - Build SaaS Applications with AI in Minutes",
-        "link": "https://creati.ai/ai-tools/vly-ai/",
-        "snippet": "Vly.ai is an innovative platform that empowers users to create fully functional SaaS applications effortlessly and without any coding skills.",
-        "source_query": "\"vly ai\" site:com OR site:io OR site:ai OR site:co -job -career"
-      },
-      {
-        "title": "vly.ai (YC F24): the easiest way to create custom full-stack ...",
-        "link": "https://www.youtube.com/watch?v=M4QcpDVFR2c",
-        "snippet": "vly.ai makes your entire team technical. We build uses expert insights & automation to deliver apps that grow faster & perform better, ...",
-        "source_query": "\"vly ai\" site:com OR site:io OR site:ai OR site:co -job -career"
-      },
-      {
-        "title": "compare the differences between vly.ai vs Linkeddit",
-        "link": "https://www.toolify.ai/compare/vly-ai-vs-linkeddit",
-        "snippet": "How to use vly.ai? To use vly.ai, simply input a prompt in English, and the platform will generate a production-ready AI-generated SaaS application.",
-        "source_query": "\"vly ai\" site:com OR site:io OR site:ai OR site:co -job -career"
-      },
-      {
-        "title": "Quivly AI",
-        "link": "https://www.quivly.ai/",
-        "snippet": "Join forward-thinking companies using AI to streamline their revenue operations. Email. Join The Waitlist. Schedule a Demo \u00b7 LinkedIn X. \u00a9 2025 Quivly, Inc. All ...",
-        "source_query": "\"vly ai\" (Crunchbase OR AngelList OR \"Product Hunt\" OR GitHub OR LinkedIn) -job -career"
-      }
-    ]
+    "product": [],
+    "market": [],
+    "press": [],
+    "reviews": [],
+    "other": []
+  },
+  "profile_metadata": {
+    "query_mode": "targeted",
+    "enriched": false,
+    "timestamp": "2025-06-22T07:30:46.248528"
   }
 }
