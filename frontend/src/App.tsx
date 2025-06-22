@@ -1,19 +1,74 @@
 import React, { useState } from 'react';
 import { Globe, Squirrel, TrendingUp, Search, Sparkle, Users, Filter, Tag, ExternalLink, ListCheck, Rocket, 
   Github, Linkedin, Star, Eye, Bell 
-      } from 'lucide-react';
+} from 'lucide-react';
 import axios from 'axios';
 
-const SignalStackVC = () => {
+// Define TypeScript interfaces for our data structures
+interface StartupTraction {
+  productHunt: {
+    votes: number;
+    rank: string;
+  };
+  github: {
+    stars: number;
+    commits: number;
+  };
+  linkedin: {
+    employees: number;
+    growth: string;
+  };
+}
+
+interface StartupSignals {
+  hot: boolean;
+  funding: string;
+  hiring: string;
+  product: string;
+}
+
+interface ProfileMetadata {
+  query_mode: string;
+  enriched: boolean;
+  timestamp: string;
+}
+
+interface Startup {
+  id: number;
+  name: string;
+  url: string;
+  description: string;
+  category: string;
+  stage: string;
+  funding: string;
+  team: string;
+  founded: string;
+  traction: StartupTraction;
+  signals: StartupSignals;
+  notes: string;
+  tags: string[];
+  confidence_scores?: Record<string, number>;
+  category_counts?: Record<string, number>;
+  raw_data?: any;
+  profile_metadata?: ProfileMetadata;
+}
+
+interface SignalBadgeProps {
+  type: string;
+  text: string;
+  hot?: boolean;
+}
+
+const SignalStackVC: React.FC = () => {
   // State for the search input
-  const [searchUrl, setSearchUrl] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const [watchlist, setWatchlist] = useState([]);
-  const [activeTab, setActiveTab] = useState('search');
-  const [selectedStartup, setSelectedStartup] = useState(null);
+  const [searchUrl, setSearchUrl] = useState<string>('');
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [watchlist, setWatchlist] = useState<Startup[]>([]);
+  const [activeTab, setActiveTab] = useState<string>('search');
+  const [selectedStartup, setSelectedStartup] = useState<Startup | null>(null);
   
   // Create a separate handler for input changes
-  const handleSearchInputChange = (e) => {
+  const handleSearchInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchUrl(e.target.value);
   };
 
@@ -47,13 +102,13 @@ const SignalStackVC = () => {
     }
   };
 
-  const addToWatchlist = (startup) => {
+  const addToWatchlist = (startup: Startup) => {
     if (!watchlist.find(item => item.id === startup.id)) {
       setWatchlist([...watchlist, startup]);
     }
   };
 
-  const SignalBadge = ({ type, text, hot = false }) => (
+  const SignalBadge: React.FC<SignalBadgeProps> = ({ type, text, hot = false }) => (
     <div className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
       hot 
         ? 'bg-orange-100 text-orange-800 border border-orange-200' 
@@ -64,73 +119,70 @@ const SignalStackVC = () => {
     </div>
   );
 
-  const SearchTab = () => (
-    <div className = "min-h-screen flex items-start pt-[20vh]">
-    <div className="max-w-4xl mx-auto">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          SignalStackVC
-        </h1>
-        <p className="text-xl text-gray-600 mb-8">
-          All the startup signals, in one place. So you can stop hunting and start investing.
-        </p>
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
-          <div className="flex gap-4 mb-6">
-            <div className="flex-1">
-              <input
-                type="text"
-                placeholder="Paste startup URL or name..."
-                value={searchUrl}
-                onChange={handleSearchInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900"
-                // Add these properties to prevent losing focus
-                autoFocus
-                onBlur={(e) => e.target.focus()}
-              />
+  const SearchTab: React.FC = () => (
+    <div className="min-h-screen flex items-start pt-[20vh]">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            SignalStackVC
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            All the startup signals, in one place. So you can stop hunting and start investing.
+          </p>
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+            <div className="flex gap-4 mb-6">
+              <div className="flex-1">
+                <input
+                  type="text"
+                  placeholder="Paste startup URL or name..."
+                  value={searchUrl}
+                  onChange={handleSearchInputChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900"
+                />
+              </div>
+              <button
+                onClick={handleSearch}
+                disabled={isLoading}
+                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 flex items-center gap-2">
+                {isLoading ? (
+                  <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                ) : (
+                  <Search className="w-5 h-5" />
+                )}
+                {isLoading ? 'Analyzing...' : 'Analyze'}
+              </button>
             </div>
-            <button
-              onClick={handleSearch}
-              disabled={isLoading}
-              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 flex items-center gap-2">
-              {isLoading ? (
-                <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-              ) : (
-                <Search className="w-5 h-5" />
-              )}
-              {isLoading ? 'Analyzing...' : 'Analyze'}
-            </button>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-gray-600">
-            <div className="flex items-center gap-2">
-              <Sparkle className="w-4 h-4 text-blue-600" />
-              Analyze Startup
-            </div>
-            <div className="flex items-center gap-2">
-              <Users className="w-4 h-4 text-blue-600" />
-              Analyze Batch
-            </div>
-            <div className="flex items-center gap-2">
-              <ListCheck className="w-4 h-4 text-blue-600" />
-              List Startups
-            </div>
-            <div className="flex items-center gap-2">
-              <Squirrel className="w-4 h-4 text-blue-600" />
-              Get Startup
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-gray-600">
+              <div className="flex items-center gap-2">
+                <Sparkle className="w-4 h-4 text-blue-600" />
+                Analyze Startup
+              </div>
+              <div className="flex items-center gap-2">
+                <Users className="w-4 h-4 text-blue-600" />
+                Analyze Batch
+              </div>
+              <div className="flex items-center gap-2">
+                <ListCheck className="w-4 h-4 text-blue-600" />
+                List Startups
+              </div>
+              <div className="flex items-center gap-2">
+                <Squirrel className="w-4 h-4 text-blue-600" />
+                Get Startup
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    </div>
   );
 
-  const ProfileTab = () => {
+  const ProfileTab: React.FC = () => {
     if (!selectedStartup) return <div>No startup selected</div>;
     
     // Add state for notes
-    const [notes, setNotes] = useState(selectedStartup.notes || "");
-    const [isSaving, setIsSaving] = useState(false);
+    const [notes, setNotes] = useState<string>(selectedStartup.notes || "");
+    const [isSaving, setIsSaving] = useState<boolean>(false);
     
     // Function to save notes
     const saveNotes = async () => {
@@ -154,7 +206,7 @@ const SignalStackVC = () => {
     };
     
     // Add confidence indicators based on backend data
-    const getConfidenceIndicator = (score) => {
+    const getConfidenceIndicator = (score: number): string => {
       if (score >= 0.8) return "High";
       if (score >= 0.5) return "Medium";
       return "Low";
@@ -360,7 +412,7 @@ const SignalStackVC = () => {
     );
   };
 
-  const WatchlistTab = () => (
+  const WatchlistTab: React.FC = () => (
     <div className="max-w-6xl mx-auto">
       <div className="bg-white rounded-lg shadow-sm border border-gray-200">
         <div className="px-6 py-4 border-b border-gray-200">
@@ -410,7 +462,6 @@ const SignalStackVC = () => {
   );
 
   return (
-    
     <div className="min-h-screen bg-gray-50">
       {/* Navigation */}
       <nav className="bg-white shadow-sm border-b border-gray-200">
@@ -494,7 +545,7 @@ const extractStartupName = (input: string): string => {
 };
 
 // Function to transform backend profile data to frontend format
-const transformProfileData = (backendProfile: any) => {
+const transformProfileData = (backendProfile: any): Startup => {
   // Create a new object that matches your frontend data structure
   return {
     id: Date.now(), // Generate a temporary ID
@@ -529,7 +580,11 @@ const transformProfileData = (backendProfile: any) => {
       product: extractProductUpdateFromText(backendProfile.product) || "No product updates"
     },
     notes: "",
-    tags: generateTagsFromProfile(backendProfile)
+    tags: generateTagsFromProfile(backendProfile),
+    confidence_scores: backendProfile.confidence_scores,
+    category_counts: backendProfile.category_counts,
+    raw_data: backendProfile.raw_data,
+    profile_metadata: backendProfile.profile_metadata
   };
 };
 
@@ -541,7 +596,8 @@ const extractNumberFromText = (text: string | null, context: string): number | n
   const regex = new RegExp(`\\d+\\s*(?:${context}|near\\s*${context}|${context}\\s*related)`, 'i');
   const match = text.match(regex);
   if (match) {
-    return parseInt(match[0].match(/\d+/)[0]);
+    const numMatch = match[0].match(/\d+/);
+    return numMatch ? parseInt(numMatch[0]) : null;
   }
   
   // Fallback: just find any number
@@ -615,8 +671,15 @@ const generateTagsFromProfile = (profile: any): string[] => {
   return tags.slice(0, 3);
 };
 
+// Add the missing saveStartupNotes function
+const saveStartupNotes = async (startupName: string, notes: string): Promise<void> => {
+  try {
+    await axios.post(`/api/startup/${encodeURIComponent(startupName)}/notes`, { notes });
+  } catch (error) {
+    console.error('Error saving notes:', error);
+    throw error;
+  }
+};
+
 export default SignalStackVC;
-
-
-
 

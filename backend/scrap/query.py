@@ -336,7 +336,7 @@ def generate_startup_profile(startup_name: str, data: dict, query_mode: str = "h
         f"6. funding: Any funding information found\n"
         f"7. market: The market they operate in and potential fit\n"
         f"8. tech_stack: Any technology information found\n"
-        f"9. sources: List of the most important URLs to reference\n\n"
+        # f"9. sources: List of the most important URLs to reference\n\n"
         f"Return only a **valid JSON object**.\n"
         f"If any field is missing or uncertain, return it as null or \"unknown\" — do not make anything up.\n"
         f"Do not include any explanations or markdown formatting, just the raw JSON."
@@ -349,7 +349,7 @@ def generate_startup_profile(startup_name: str, data: dict, query_mode: str = "h
             {"role": "user", "content": prompt}
         ],
         max_tokens=700,
-        temperature=0.2,
+        temperature=0.4,
     )
     
     try:
