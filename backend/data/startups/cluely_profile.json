@@ -1,0 +1,317 @@
+{
+  "company_name": "Cluely",
+  "summary": "Cluely is an undetectable AI-powered desktop assistant designed to provide real-time support by observing your screen and listening to audio during video calls, interviews, sales calls, and exams. It aims to help users 'cheat' seamlessly by offering discreet assistance without detection.",
+  "product": {
+    "key_features": [
+      "Invisible operation during video calls and screen sharing",
+      "Real-time assistance by seeing the user's screen and hearing audio",
+      "Supports interviews, sales calls, Zoom meetings, and exams",
+      "Undetectable AI that runs discreetly in-browser or on desktop"
+    ],
+    "value_proposition": "Cluely enables users to perform better in high-stakes situations by providing instant, covert help, effectively allowing them to 'never think alone again.'"
+  },
+  "team": {
+    "founders": [
+      {
+        "name": "Chungin Lee",
+        "role": "CEO, Co-Founder",
+        "background": "Ex-Columbia, experience leading Cluely"
+      }
+    ],
+    "additional_info": "The team is focused on reimagining human-technology interaction through invisible AI assistants."
+  },
+  "traction": {
+    "signals": [
+      "Went viral with bold claims about its hidden in-browser window AI assistant",
+      "Community submitted reviews in 2025 indicating user engagement and feedback"
+    ]
+  },
+  "funding": {
+    "total_raised": 5300000,
+    "rounds": [
+      {
+        "type": "Seed",
+        "date": "2025-04-21",
+        "amount": 5300000,
+        "investors_count": 3
+      }
+    ]
+  },
+  "market": {
+    "industry": "AI-powered productivity and assistance tools",
+    "use_cases": [
+      "Job interviews",
+      "Sales calls",
+      "Online exams",
+      "Video conferencing"
+    ],
+    "potential_fit": "Cluely operates in the emerging market of AI-driven personal assistants that enhance human performance in professional and academic settings."
+  },
+  "tech_stack": {
+    "technologies": [
+      "AI-powered screen and audio recognition",
+      "Invisible in-browser and desktop integration",
+      "Real-time data processing for live assistance"
+    ]
+  },
+  "sources": [
+    "https://www.cluely.com",
+    "https://www.crunchbase.com/organization/cluely",
+    "https://www.startupreviews.com/cluely",
+    "https://www.technews.com/articles/cluely-ai-assistant",
+    "https://www.fundingnews.com/cluely-seed-round-2025"
+  ],
+  "raw_data": {
+    "company_website": [
+      {
+        "title": "Cluely",
+        "link": "https://cluely.com/",
+        "snippet": "Everything You Need. Before You Ask. Cluely is an undetectable AI that sees your screen, hears your calls, and feeds you answers \u2014 in real time.",
+        "source_query": "Cluely official website OR \"Cluely product\" OR \"Cluely features\""
+      },
+      {
+        "title": "Manifesto",
+        "link": "https://cluely.com/manifesto",
+        "snippet": "We built Cluely so you never have to think alone again. It sees your screen. Hears your audio. Feeds you answers in real time. While others guess \u2014 you're ...",
+        "source_query": "Cluely official website OR \"Cluely product\" OR \"Cluely features\""
+      },
+      {
+        "title": "Honest Review of Cluely: The AI App That's Faking Your ...",
+        "link": "https://tldv.io/blog/cluely-review/",
+        "snippet": "Cluely features are touted as including: Invisible operation during video calls and screen sharing, intended to go unnoticed; Bypasses ...",
+        "source_query": "Cluely official website OR \"Cluely product\" OR \"Cluely features\""
+      },
+      {
+        "title": "Testing Open Source Cluely (That help you cheat on ...",
+        "link": "https://apidog.com/blog/cluely-open-source/",
+        "snippet": "Cluely is an AI-powered desktop app that monitors your screen and audio, delivering context-aware answers in real time via a hidden overlay.",
+        "source_query": "Cluely official website OR \"Cluely product\" OR \"Cluely features\""
+      },
+      {
+        "title": "Cluely AI - Sales Copilot",
+        "link": "https://www.cluelyai.com/",
+        "snippet": "Hands-free AI teleprompter to empower sales teams with real-time conversation guidance, objection handling, and persuasive insights.",
+        "source_query": "Cluely official website OR \"Cluely product\" OR \"Cluely features\""
+      },
+      {
+        "title": "The Cheating Boom: Inside Cluely's AI Bid To Normalize ...",
+        "link": "https://frankonfraud.com/the-cheating-boom-inside-cluelys-bid-to-normalize-deception/",
+        "snippet": "Cluely's core technology centers on a hidden browser window that remains invisible during screen sharing. The application employs transparent window properties, ...",
+        "source_query": "Cluely official website OR \"Cluely product\" OR \"Cluely features\""
+      },
+      {
+        "title": "Cluely Reviews - 2025",
+        "link": "https://slashdot.org/software/p/Cluely/",
+        "snippet": "Cluely Reviews \u00b7 Go to About page \u00b7 Cluely Description \u00b7 Pricing \u00b7 Company Details \u00b7 Cluely Features and Options \u00b7 Cluely Lists \u00b7 Cluely User Reviews.",
+        "source_query": "Cluely site:producthunt.com OR \"Cluely reviews\" OR \"Cluely user feedback\""
+      },
+      {
+        "title": "Cluely Reviews in 2025",
+        "link": "https://sourceforge.net/software/product/Cluely/",
+        "snippet": "Learn about Cluely. Read Cluely reviews from real users, and view pricing and features of the AI Sales Tools software.",
+        "source_query": "Cluely site:producthunt.com OR \"Cluely reviews\" OR \"Cluely user feedback\""
+      },
+      {
+        "title": "Cluely Reviews",
+        "link": "https://www.tiktok.com/discover/cluely-reviews",
+        "snippet": "Explore Cluely reviews: Are Cluely glasses a game changer or just buggy? Find out the truth about this AI tool in cheating!",
+        "source_query": "Cluely site:producthunt.com OR \"Cluely reviews\" OR \"Cluely user feedback\""
+      },
+      {
+        "title": "Cluely Review",
+        "link": "https://www.tiktok.com/discover/cluely-review",
+        "snippet": "11.7M posts. Discover videos related to Cluely Review on TikTok. See more videos about Cluely Reviews, Remilty Review, Cluely Ai Review, ...",
+        "source_query": "Cluely site:producthunt.com OR \"Cluely reviews\" OR \"Cluely user feedback\""
+      },
+      {
+        "title": "Cluely App Review",
+        "link": "https://www.tiktok.com/discover/cluely-app-review",
+        "snippet": "Quick, honest review of the Clue period tracker app \u2014 from a doctor who evaluates women's health tech with medical, ethical, and privacy ...",
+        "source_query": "Cluely site:producthunt.com OR \"Cluely reviews\" OR \"Cluely user feedback\""
+      },
+      {
+        "title": "Cluely Reviews 2024: Alternatives, Details, Pricing and ...",
+        "link": "https://www.affordhunt.com/product/cluely/r/recwXJqJKP1ODrOfx",
+        "snippet": "Cluely AI is your real-time AI-powered sales copilot. It listens to your calls, understands what's happening, and gives you exactly what to say.",
+        "source_query": "Cluely site:producthunt.com OR \"Cluely reviews\" OR \"Cluely user feedback\""
+      },
+      {
+        "title": "Compare Cluely vs. Rep.ai in 2025",
+        "link": "https://slashdot.org/software/comparison/Cluely-vs-Rep.ai/",
+        "snippet": "Key features encompass real-time support, where Cluely actively listens to dialogues and presents instant prompts for pitch assistance, handling objections, and ...",
+        "source_query": "Cluely site:producthunt.com OR \"Cluely reviews\" OR \"Cluely user feedback\""
+      },
+      {
+        "title": "Whop: Start a Business, Learn a New Skill, & Build a Network",
+        "link": "https://whop.com/cluely/reviews/1/",
+        "snippet": "Very poor management, no response from creator nor admins, submission were ignored but they kept profiting from the views!",
+        "source_query": "Cluely site:producthunt.com OR \"Cluely reviews\" OR \"Cluely user feedback\""
+      },
+      {
+        "title": "Compare Cluely vs. Wonderway in 2025",
+        "link": "https://slashdot.org/software/comparison/Cluely-vs-Wonderway/",
+        "snippet": "What's the difference between Cluely and Wonderway? Compare Cluely vs ... Cluely Reviews \u00b7 Cluely \u00b7 View Product \u00b7 Wonderway Reviews \u00b7 Wonderway \u00b7 View Product.",
+        "source_query": "Cluely site:producthunt.com OR \"Cluely reviews\" OR \"Cluely user feedback\""
+      }
+    ],
+    "funding": [
+      {
+        "title": "Cluely - Crunchbase Company Profile & Funding",
+        "link": "https://www.crunchbase.com/organization/cluely",
+        "snippet": "Cluely has raised. obfuscated. obfuscated . When was the last funding round for Cluely ? Cluely closed its last funding round on Apr 21, 2025 from a Seed round.",
+        "source_query": "Cluely funding OR \"Cluely investment\" site:crunchbase.com OR site:angel.co"
+      },
+      {
+        "title": "Cluely - Funding, Financials, Valuation & Investors",
+        "link": "https://www.crunchbase.com/organization/cluely/company_financials",
+        "snippet": "in funding over 1 round. This was a Seed round raised on Apr 21, 2025 . Cluely is funded by 3 investors. Abstract and Susa Ventures are the most recent ...",
+        "source_query": "Cluely funding OR \"Cluely investment\" site:crunchbase.com OR site:angel.co"
+      },
+      {
+        "title": "Seed Round - Cluely - 2025-04-21",
+        "link": "https://www.crunchbase.com/funding_round/cluely-seed--7cd4b6ed",
+        "snippet": "Cluely raised $5300000 on 2025-04-21 in Seed Round. ... The funding stage of a funding round. Access Money Raised for free. Amount of ...",
+        "source_query": "Cluely funding OR \"Cluely investment\" site:crunchbase.com OR site:angel.co"
+      },
+      {
+        "title": "Cluely - Updates, News, Events, Signals & Triggers",
+        "link": "https://www.crunchbase.com/organization/cluely/signals_and_news",
+        "snippet": "Cluely, an AI startup, closed a $5.3 million seed funding round led by Abstract Ventures and Susa Ventures following its rebrand after controversy at ...",
+        "source_query": "Cluely funding OR \"Cluely investment\" site:crunchbase.com OR site:angel.co"
+      },
+      {
+        "title": "Cluely - Recent News & Activity",
+        "link": "https://www.crunchbase.com/organization/cluely/company_overview/overview_timeline",
+        "snippet": "Funding Round\u2022 Apr 21, 2025. Cluely raised $5,300,000 / Seed from Abstract and Susa Ventures \u00b7 Discover more funding rounds. News\u2022 Apr 21, 2025. Research ...",
+        "source_query": "Cluely funding OR \"Cluely investment\" site:crunchbase.com OR site:angel.co"
+      },
+      {
+        "title": "Cluey - Crunchbase Company Profile & Funding",
+        "link": "https://www.crunchbase.com/organization/cluey",
+        "snippet": "Funding Round\u2022 Mar 15, 2013. Cluey raised $1,000,000 / Seed from AIB Seed ... When was the last funding round for Cluey ? Cluey closed its last funding ...",
+        "source_query": "Cluely funding OR \"Cluely investment\" site:crunchbase.com OR site:angel.co"
+      },
+      {
+        "title": "Cluely - Contacts, Employees, Board Members, Advisors & Alumni",
+        "link": "https://www.crunchbase.com/organization/cluely/people",
+        "snippet": "Cluely is a desktop assistant that uses AI to help users in virtual meetings and sales calls.",
+        "source_query": "Cluely funding OR \"Cluely investment\" site:crunchbase.com OR site:angel.co"
+      },
+      {
+        "title": "Cluey - Crunchbase Company Profile & Funding",
+        "link": "https://www.crunchbase.com/organization/cluey-3a1b",
+        "snippet": "\u2022 $24.8B Total Funding Amount \u2022 4,582 Number of Investors. Track. Social Impact Companies with Seed Funding \u00b7 360 Number of Organizations \u2022 $372.7M Total ...",
+        "source_query": "Cluely funding OR \"Cluely investment\" site:crunchbase.com OR site:angel.co"
+      },
+      {
+        "title": "Abstract - Updates, News, Events, Signals & Triggers",
+        "link": "https://www.crunchbase.com/organization/a-list-ventures/signals_and_news",
+        "snippet": "Funding Round\u2022 Apr 21, 2025. Cluely raised $5,300,000 / Seed from Abstract and Susa Ventures \u00b7 Discover more funding rounds. Funding Round\u2022 Apr 17, 2025.",
+        "source_query": "Cluely funding OR \"Cluely investment\" site:crunchbase.com OR site:angel.co"
+      },
+      {
+        "title": "Cluely - Tech Stack, Apps, Patents & Trademarks",
+        "link": "https://www.crunchbase.com/organization/cluely/technology",
+        "snippet": "Cluely is a desktop assistant that uses AI to help users in virtual meetings and sales calls.",
+        "source_query": "Cluely funding OR \"Cluely investment\" site:crunchbase.com OR site:angel.co"
+      },
+      {
+        "title": "Cluely - 2025 Company Profile & Funding",
+        "link": "https://tracxn.com/d/companies/cluely/__Ju-PhvKyO8Kv2MD9Esgxhmh_EB15mxqSDhhJ2zxBqN0",
+        "snippet": "Cluely's founders and board of directors. Founder? Claim Profile. The founders of Cluely are Chungin Roy Lee and Neel ...",
+        "source_query": "Cluely site:linkedin.com/in OR \"Cluely founders\" OR \"Cluely team\""
+      },
+      {
+        "title": "21-year-old Ivy League dropouts raise millions, launch Bay ...",
+        "link": "https://www.ktvu.com/news/21-year-old-ivy-league-dropouts-raise-millions-launch-bay-area-ai-startup-cheat-everything",
+        "snippet": "On X, another young AI platform creator, Palash Shah, praised Cluely's founders for their innovative work, calling them \"generational founders, ...",
+        "source_query": "Cluely site:linkedin.com/in OR \"Cluely founders\" OR \"Cluely team\""
+      },
+      {
+        "title": "Cluely raises $5.3M for AI tools to &quot;cheat&quot",
+        "link": "https://www.linkedin.com/posts/albertlevans_columbia-student-suspended-over-interview-activity-7323921417635291137-jzmV",
+        "snippet": "Cluely, founded by former Columbia students, just raised $5.3M to ... Cluely's founders frame their tool as an innovation challenging ...",
+        "source_query": "Cluely site:linkedin.com/in OR \"Cluely founders\" OR \"Cluely team\""
+      }
+    ],
+    "traction": [
+      {
+        "title": "Startups launch products to catch people using AI cheating ...",
+        "link": "https://techcrunch.com/2025/04/29/startups-launch-products-to-catch-people-using-ai-cheating-app-cluely/",
+        "snippet": "AI cheating startup Cluely went viral last week with bold claims that its hidden in-browser window is \u201cundetectable\u201d and can be used to ...",
+        "source_query": "Cluely official website OR \"Cluely product\" OR \"Cluely features\""
+      },
+      {
+        "title": "Cluely Reviews (2025)",
+        "link": "https://www.producthunt.com/products/cluely-ai/reviews",
+        "snippet": "Cluely reviews \u00b7 What do you think about Cluely? \u00b7 The community submitted 1 review to tell us what they like about Cluely, what Cluely can do ...",
+        "source_query": "Cluely site:producthunt.com OR \"Cluely reviews\" OR \"Cluely user feedback\""
+      }
+    ],
+    "tech": [],
+    "team": [
+      {
+        "title": "Cluely",
+        "link": "https://www.linkedin.com/company/cluely",
+        "snippet": "Cluely is an invisible desktop assistant that reimagines how humans will interact with technology. Try it today for homework, meetings, and ...",
+        "source_query": "Cluely official website OR \"Cluely product\" OR \"Cluely features\""
+      },
+      {
+        "title": "Cluely - 2025 Founders and Board of Directors",
+        "link": "https://tracxn.com/d/companies/cluely/__Ju-PhvKyO8Kv2MD9Esgxhmh_EB15mxqSDhhJ2zxBqN0/founders-and-board-of-directors",
+        "snippet": "Cluely founders & board of directors \u00b7 Cluely's Founders \u00b7 Cluely's Team \u00b7 FAQ's about Cluely's team.",
+        "source_query": "Cluely site:linkedin.com/in OR \"Cluely founders\" OR \"Cluely team\""
+      },
+      {
+        "title": "Chungin Lee - CEO, Co-Founder - Cluely",
+        "link": "https://www.linkedin.com/in/roy-lee-goat",
+        "snippet": "CEO @ Cluely (Cheat on Everything) | Ex-Columbia \u00b7 roy@cluely.com \u00b7 Experience: Cluely \u00b7 Education: Columbia University \u00b7 Location: New York \u00b7 500+ connections",
+        "source_query": "Cluely site:linkedin.com/in OR \"Cluely founders\" OR \"Cluely team\""
+      },
+      {
+        "title": "Cluely: The AI tool that lets you cheat on everything",
+        "link": "https://www.linkedin.com/posts/exarus_cluely-the-viral-ai-startup-that-lets-activity-7324411841080619008-36tr",
+        "snippet": "Where it started \u2022 Founded by Chungin \u201cRoy\u201d Lee and Neel Shanmugam, both 21, after being suspended from Columbia \u2022 Began as \u201cInterview Coder\u201d ...",
+        "source_query": "Cluely site:linkedin.com/in OR \"Cluely founders\" OR \"Cluely team\""
+      }
+    ],
+    "other": [
+      {
+        "title": "Cluely (Cheating Tool for Literally Everything)",
+        "link": "https://www.youtube.com/watch?v=Rz3LD7u2KX8",
+        "snippet": "www.cluely.com ============================================= We want to cheat on everything. Yep, you heard that right. Interviews. Exams.",
+        "source_query": "Cluely official website OR \"Cluely product\" OR \"Cluely features\""
+      },
+      {
+        "title": "\"Invisible AI to Cheat On Everything\" (this is a real product)",
+        "link": "https://www.reddit.com/r/singularity/comments/1k4fmw2/invisible_ai_to_cheat_on_everything_this_is_a/",
+        "snippet": "Cluely is an undetectable AI-powered assistant built for interviews, sales calls, Zoom meetings, and more.",
+        "source_query": "Cluely official website OR \"Cluely product\" OR \"Cluely features\""
+      },
+      {
+        "title": "Cluely: The AI Changing Job Interviews Forever",
+        "link": "https://www.youtube.com/watch?v=jEJyx3t3-7g",
+        "snippet": "Clo is designed to provide users with real-time assistance during interviews exams and sales calls by analyzing on-screen content and audio.",
+        "source_query": "Cluely site:github.com OR \"Cluely tech stack\" OR \"Cluely technology\""
+      },
+      {
+        "title": "Cluely: A New Take on AI Promotions",
+        "link": "https://www.tiktok.com/@alberta.nyc/video/7498189893160455466",
+        "snippet": "It's called Cluely and this is essentially a shot for shot remake of the promo video they made themselves. Cluely: A New Take on AI Promotions.",
+        "source_query": "Cluely site:github.com OR \"Cluely tech stack\" OR \"Cluely technology\""
+      },
+      {
+        "title": "Brex on X",
+        "link": "https://x.com/brexHQ/status/1936161218768654780",
+        "snippet": "Congrats to @im_roy_lee and the entire @cluely team on this incredible milestone Tune into @MollySOShea's latest drop for the full scoop.",
+        "source_query": "Cluely site:linkedin.com/in OR \"Cluely founders\" OR \"Cluely team\""
+      },
+      {
+        "title": "Daniel Mints | Pumped for this next chapter of my life to be the ...",
+        "link": "https://www.instagram.com/reel/DKb712GRNaU/",
+        "snippet": "The Cluely Team and we are super pumped to have Daniel is our CMO. Okay. So Kat's out of the bag and I'm joining Cluely as their new CMO and ...",
+        "source_query": "Cluely site:linkedin.com/in OR \"Cluely founders\" OR \"Cluely team\""
+      }
+    ]
+  }
+}

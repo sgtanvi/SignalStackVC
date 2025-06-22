@@ -31,7 +31,7 @@ async def api_entry():
     """
     Simple health-check endpoint.
     """
-    return {"Welcome": "AutomatedCaller API"}
+    return {"Welcome": "SignalStackVC API"}
 
 # Endpoint to handle CSV upload
 @app.post("/upload-csv/")
