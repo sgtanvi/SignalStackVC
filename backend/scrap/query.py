@@ -10,9 +10,9 @@ load_dotenv()
 client      = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 SERPAPI_KEY = os.getenv("SERPAPI_KEY")
 LLM_MODEL = os.getenv("LLM_MODEL", "gpt-4.1-mini")
-MAX_RESULTS = 15  # Maximum number of results to keep per startup
+MAX_RESULTS = 30 # Maximum number of results to keep per startup
 
-def generate_startup_search_queries(startup_name: str, n: int = 5) -> list[str]:
+def generate_startup_search_queries(startup_name: str, n: int = 2) -> list[str]:
     """
     Generate optimized search queries to gather comprehensive data about a startup.
     """
