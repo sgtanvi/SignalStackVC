@@ -1,3 +1,10 @@
+Run this hoe
+cd into frontend tho dont forget 
+npm install -g pnpm
+pnpm install
+pnpm dev
+
+-
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
