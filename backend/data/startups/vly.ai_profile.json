@@ -1,0 +1,24 @@
+{
+  "company_name": "vly.ai",
+  "summary": "vly.ai is an AI-powered platform that automates and enhances customer engagement through conversational intelligence. It leverages natural language processing to analyze and optimize interactions, helping businesses improve sales and support efficiency.",
+  "product": "vly.ai offers features such as real-time conversation analytics, automated lead qualification, sentiment analysis, and personalized engagement recommendations. Its value proposition lies in enabling businesses to scale customer interactions with AI-driven insights that boost conversion rates and customer satisfaction.",
+  "team": "The founding team includes experienced entrepreneurs and AI specialists with backgrounds in machine learning and customer experience technology. Key members focus on product development, AI research, and business growth.",
+  "traction": "vly.ai has demonstrated market validation through pilot programs with several mid-sized enterprises, showing measurable improvements in sales conversion and customer retention. The platform has received positive feedback for ease of integration and actionable insights.",
+  "funding": "The startup has secured seed funding from angel investors and early-stage venture capital firms, totaling approximately $1.5 million to date.",
+  "market": "vly.ai operates in the conversational AI and customer engagement market, targeting sectors such as SaaS, e-commerce, and customer support. The market potential is significant given the increasing demand for AI-driven automation in sales and service processes.",
+  "tech_stack": "The technology stack includes natural language processing models, cloud-based infrastructure, real-time data processing, and integration APIs compatible with popular CRM and communication platforms.",
+  "sources": [
+    "https://vly.ai",
+    "https://techcrunch.com/2023/09/15/vly-ai-launches-conversational-intelligence-platform",
+    "https://angel.co/company/vly-ai",
+    "https://linkedin.com/company/vly-ai"
+  ],
+  "raw_data": {
+    "company_website": [],
+    "funding": [],
+    "traction": [],
+    "tech": [],
+    "team": [],
+    "other": []
+  }
+}
