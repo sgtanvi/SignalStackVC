@@ -12,6 +12,7 @@ load_dotenv()
 
 app = FastAPI()
 
+
 origins = [
     '*'
 ]
@@ -27,6 +28,9 @@ app.add_middleware(
 
 @app.get("/")
 async def api_entry():
+    """
+    Simple health-check endpoint.
+    """
     return {"Welcome": "AutomatedCaller API"}
 
 # Endpoint to handle CSV upload

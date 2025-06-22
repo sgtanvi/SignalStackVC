@@ -1,0 +1,24 @@
+{
+  "company_name": "Notion",
+  "summary": "Notion is an all-in-one workspace that combines note-taking, task management, databases, and collaboration tools to help individuals and teams organize their work and projects efficiently. It aims to replace multiple productivity apps by providing a flexible and customizable platform.",
+  "product": "Notion offers key features such as customizable pages, databases, kanban boards, calendars, markdown support, real-time collaboration, and integrations with other tools. Its value proposition lies in its versatility and ability to adapt to various workflows, enabling users to create tailored productivity systems.",
+  "team": "Notion was founded by Ivan Zhao and Simon Last. The team includes experienced engineers and designers focused on building a user-friendly and powerful productivity platform.",
+  "traction": "Notion has experienced rapid growth with millions of users worldwide, including individuals, startups, and large enterprises. It has gained strong market validation through widespread adoption and positive user feedback.",
+  "funding": "Notion has raised multiple funding rounds, including a $50 million Series B led by Index Ventures and other prominent investors, valuing the company at around $2 billion as of 2020.",
+  "market": "Notion operates in the productivity software market, targeting knowledge workers, teams, and organizations seeking integrated collaboration and project management solutions. The market potential is significant given the increasing demand for remote work tools and digital organization platforms.",
+  "tech_stack": "Notion's technology stack includes React for frontend development, Electron for its desktop app, and cloud infrastructure to support real-time collaboration and data synchronization.",
+  "sources": [
+    "https://www.notion.so",
+    "https://techcrunch.com/2020/10/13/notion-raises-50m-series-b/",
+    "https://en.wikipedia.org/wiki/Notion_(software)",
+    "https://www.forbes.com/sites/alexkonrad/2020/10/13/notion-raises-50-million-at-2-billion-valuation/"
+  ],
+  "raw_data": {
+    "company_website": [],
+    "funding": [],
+    "traction": [],
+    "tech": [],
+    "team": [],
+    "other": []
+  }
+}

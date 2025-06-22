@@ -223,5 +223,64 @@ def main(startup_name: str = None):
     output_path = save_startup_profile(profile)
     print(f"Process complete. Profile saved to {output_path}")
 
+def test():
+    """
+    Run a quick test of the startup intelligence gathering functionality.
+    """
+    print("=== Running Startup Intelligence Test ===")
+    
+    # Test with a well-known startup
+    test_startup = "Notion"
+    print(f"Testing with startup: {test_startup}")
+    
+    # Test query generation
+    print("\nTesting search query generation...")
+    queries = generate_startup_search_queries(test_startup)
+    print(f"Generated {len(queries)} search queries:")
+    for i, query in enumerate(queries, 1):
+        print(f"  {i}. {query}")
+    
+    # Test a single search to avoid using too many API calls
+    print("\nTesting search with first query only...")
+    test_query = queries[0] if queries else f"{test_startup} company"
+    params = {
+        "api_key": SERPAPI_KEY,
+        "engine": "google",
+        "q": test_query,
+        "num": 3,  # Limit to 3 results for the test
+        "google_domain": "google.com",
+        "gl": "us",
+        "hl": "en"
+    }
+    
+    try:
+        search = GoogleSearch(params)
+        data = search.get_dict()
+        results = data.get("organic_results", [])
+        print(f"Search successful! Found {len(results)} results for query: '{test_query}'")
+        
+        if results:
+            print("\nSample result:")
+            sample = results[0]
+            print(f"  Title: {sample.get('title')}")
+            print(f"  Link: {sample.get('link')}")
+            print(f"  Snippet: {sample.get('snippet', '')[:100]}...")
+            
+            # Test categorization
+            category = categorize_result(sample, test_startup)
+            print(f"  Categorized as: {category}")
+        
+        print("\nAPI connection and search functionality working correctly!")
+    except Exception as e:
+        print(f"\nError during search test: {str(e)}")
+        print("Check your SERPAPI_KEY environment variable and internet connection.")
+    
+    print("\n=== Test Complete ===")
+    print("To run a full analysis, execute: python -m backend.scrap.query")
+
 if __name__ == "__main__":
-    main()
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1] == "--test":
+        test()
+    else:
+        main()
